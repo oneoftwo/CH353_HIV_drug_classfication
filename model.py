@@ -2,6 +2,7 @@ import torch
 from torch import nn
 
 import config as CONFIG
+'f'
 
 # Vanilla MPNN
 class VanillaMPNN(nn.Module):
