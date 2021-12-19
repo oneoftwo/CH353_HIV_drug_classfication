@@ -3,7 +3,8 @@ LJW*
 *.x
 
 # data
-*provided.txt
+positive_provided.txt
+negative_provided.txt
 
 # experiment results
 /exp_*/
