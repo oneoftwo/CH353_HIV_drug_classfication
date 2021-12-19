@@ -24,8 +24,9 @@ class VanillaMPNN(nn.Module):
     def forward(self, h, e, adj, atom_N):
         h = self.embedding(h)
         for layer in self.mpnn_layers:
+            h_res = h
             h, e, adj = layer(h, e, adj)
-            # h_ = h_ + h
+            h = h + h_res
         h, e, adj = self.mpnn_last(h, e, adj)
         # readout, divide by atom number
         h = h.sum(dim=1) # h[b hd]

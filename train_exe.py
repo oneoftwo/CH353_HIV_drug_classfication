@@ -96,7 +96,7 @@ for epoch_idx in range(CONFIG.n_epoch):
     print('epoch: {}'.format(epoch_idx))
 
     # train
-    lr = lr * 0.97
+    lr = lr * 0.98
     optimizer = torch.optim.Adam(model.parameters(), lr=lr)
     model, train_loss, train_acc = TRAIN.processor(model.cuda(), train_loader, optimizer=optimizer)
     train_loss_history.append(train_loss)
@@ -135,23 +135,33 @@ for epoch_idx in range(CONFIG.n_epoch):
 
     plt.plot(train_loss_history)
     plt.plot(val_loss_history)
+    plt.xlabel('epoch')
+    plt.ylabel('loss')
     plt.savefig(save_dir + 'plot_loss')
     plt.clf()
 
     plt.plot(train_acc_history)
     plt.plot(val_acc_history)
+    plt.xlabel('epoch')
+    plt.ylabel('accuracy')
     plt.savefig(save_dir + 'plot_acc')
     plt.clf()
     
     plt.plot(val_precision_history)
+    plt.xlabel('epoch')
+    plt.ylabel('precision')
     plt.savefig(save_dir + 'plot_precision')
     plt.clf()
 
     plt.plot(val_auroc_history)
+    plt.xlabel('epoch')
+    plt.ylabel('AUROC')
     plt.savefig(save_dir + 'plot_auroc')
     plt.clf()
 
     plt.plot(val_model_score_history)
+    plt.xlabel('epoch')
+    plt.ylabel('model score')
     plt.savefig(save_dir + 'plot_score')
     plt.clf()
 
