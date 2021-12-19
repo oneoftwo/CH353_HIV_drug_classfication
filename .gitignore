@@ -1,2 +1,6 @@
+# jobscript related files
 LJW*
+*.x
+
+# experiment results
 exp*/
