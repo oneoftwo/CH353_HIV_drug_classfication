@@ -1,11 +1,11 @@
 # major = 0, minor = 1
 
-save_dir = './exp_4_gru' # './exp_x'
+save_dir = './exp_5_1to1/' # './exp_x'
 
 testing_mode = False
 
 # parse
-oversampling_rate = 20
+oversampling_rate = 31
 val_ratio = 0.2
 max_atom = 60
 
