@@ -3,4 +3,4 @@ LJW*
 *.x
 
 # experiment results
-exp*/
+/exp_*/
