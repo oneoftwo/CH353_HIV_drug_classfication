@@ -96,7 +96,7 @@ for epoch_idx in range(CONFIG.n_epoch):
     print('epoch: {}'.format(epoch_idx))
 
     # train
-    lr = lr * 0.98
+    lr = lr * 0.99
     optimizer = torch.optim.Adam(model.parameters(), lr=lr)
     model, train_loss, train_acc = TRAIN.processor(model.cuda(), train_loader, optimizer=optimizer)
     train_loss_history.append(train_loss)
@@ -110,8 +110,11 @@ for epoch_idx in range(CONFIG.n_epoch):
     save_dir = CONFIG.save_dir
     if not save_dir[-1] == '/':
         save_dir = save_dir + '/'
+
+    model.cpu()
     pickle.dump(model, open(save_dir + 'model/model_{}.pkl'.format(epoch_idx), 'wb'))
-    
+    model.cuda()
+
     precision, auroc = TRAIN.get_evaluation_criteria(model, val_loader)
     val_precision_history.append(precision)
     val_auroc_history.append(auroc)

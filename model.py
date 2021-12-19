@@ -68,7 +68,7 @@ class MPNNLayer(nn.Module):
         if use_dropout:
             self.dropout = nn.Dropout(0.3)
         if use_activation:
-            self.act = nn.LeakyReLU()
+            self.act = nn.SiLU()
         self.gru_cell = nn.GRUCell(h_dim, h_dim)
 
     def forward(self, h, e, adj): # adj[b N N]

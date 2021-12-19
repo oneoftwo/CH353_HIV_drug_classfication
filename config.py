@@ -1,6 +1,13 @@
-# major = 0, minor = 1
+# major = negative = 0, minor = positive = 1
 
-save_dir = './exp_6_final/' # './exp_x'
+save_dir = './exp_8_final/' # './exp_x'
+
+
+
+
+
+# all fixed
+# 2021.12.19 11:58
 
 testing_mode = False
 
@@ -22,6 +29,6 @@ use_dropout = True
 
 # train
 batch_size = 64
-learning_rate = 3e-5
-n_epoch = 200
+learning_rate = 1e-5
+n_epoch = 400
 
