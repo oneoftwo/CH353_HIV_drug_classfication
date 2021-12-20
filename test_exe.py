@@ -17,7 +17,12 @@ positive_dir = './positive_provided.txt'
 negative_dir = './negative_provided.txt'
 
 # model pkl file
-model_dir = './exp_7_final/model/model_200.pkl'
+# oversampling 1 (no oversampling)
+model_dir = './final_models/model_best_os1.pkl'
+# oversampling 5
+# model_dir = './final_models/model_best_os5.pkl'
+# oversampling 20
+# model_dir = './final_models/model_best_os20.pkl'
 
 ###############################################################################
 

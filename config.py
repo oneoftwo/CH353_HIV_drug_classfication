@@ -1,6 +1,6 @@
 # major = negative = 0, minor = positive = 1
 
-save_dir = './exp_8_final/' # './exp_x'
+save_dir = './exp_final_os10/' # './exp_x'
 
 # all fixed
 # 2021.12.19 11:58
@@ -8,7 +8,7 @@ save_dir = './exp_8_final/' # './exp_x'
 testing_mode = False
 
 # parse
-oversampling_rate = 20
+oversampling_rate = 5
 val_ratio = 0.2
 max_atom = 60
 
@@ -25,6 +25,6 @@ use_dropout = True
 
 # train
 batch_size = 64
-learning_rate = 1e-5
-n_epoch = 400
+learning_rate = 8e-6
+n_epoch = 500
 

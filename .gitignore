@@ -10,3 +10,5 @@ LJW*
 
 # experiment results
 /exp_*/
+exp_final*/
+!final_models/
