@@ -9,10 +9,17 @@ import config as CONFIG
 from torch.utils.data import DataLoader
 
 
+###############################################################################
+# config ######################################################################
+
+# pos and neg txt file to test
 positive_dir = './positive_provided.txt'
 negative_dir = './negative_provided.txt'
 
+# model pkl file
 model_dir = './exp_7_final/model/model_200.pkl'
+
+###############################################################################
 
 
 model = pickle.load(open(model_dir, 'rb'))

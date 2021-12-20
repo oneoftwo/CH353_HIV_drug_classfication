@@ -1,10 +1,12 @@
-# jobscript related files
+# job related files
 LJW*
-*.x
+# *.x
+
 
 # data
-positive_provided.txt
-negative_provided.txt
+# positive_provided.txt
+# negative_provided.txt
+
 
 # experiment results
 /exp_*/

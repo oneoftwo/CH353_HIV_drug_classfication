@@ -2,10 +2,6 @@
 
 save_dir = './exp_8_final/' # './exp_x'
 
-
-
-
-
 # all fixed
 # 2021.12.19 11:58
 
@@ -18,7 +14,7 @@ max_atom = 60
 
 node_feature = ['C', 'N', 'O', 'F', 'P', 'S', 'Cl', 'Se', 'Br', 'I'] # non-metal
 # additional_properties = ['charge', 'valence', 'in_ring', 'is_aromatic', 'num_hydrogen']
-additional_properties = ['charge', 'valence', 'num_hydrogen'] # fundametals
+additional_properties = ['charge', 'valence', 'num_hydrogen'] # fundametal props
 # additional_properties = ['num_hydrogen']
 
 # model

@@ -1,4 +1,4 @@
-# Predict HIV Progression (from kaggle)
+# HIV
 
 kaggle competition, predict HIV progression
 
