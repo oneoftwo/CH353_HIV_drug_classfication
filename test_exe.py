@@ -18,9 +18,9 @@ negative_dir = './negative_provided.txt'
 
 # model pkl file
 # oversampling 1 (no oversampling)
-model_dir = './final_models/model_best_os1.pkl'
+# model_dir = './final_models/model_best_os1.pkl'
 # oversampling 5
-# model_dir = './final_models/model_best_os5.pkl'
+model_dir = './final_models/model_best_os5.pkl'
 # oversampling 20
 # model_dir = './final_models/model_best_os20.pkl'
 
@@ -28,7 +28,7 @@ model_dir = './final_models/model_best_os1.pkl'
 
 
 model = pickle.load(open(model_dir, 'rb'))
-
+print(model)
 minor_smiles = PARSE.get_smiles_list(positive_dir)
 major_smiles = PARSE.get_smiles_list(negative_dir)
 
