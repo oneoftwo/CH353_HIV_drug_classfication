@@ -1,5 +1,7 @@
 # job related files
 LJW*
 
-exp_result/
+!exp_result/model/model_200.pkl
+!exp_result/model/
+exp_result/model/
 !exp_result/model/model_200.pkl

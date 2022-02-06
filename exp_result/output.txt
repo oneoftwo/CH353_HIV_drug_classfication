@@ -1,0 +1,3566 @@
+testing_mode: False
+oversampling rate: 5
+max_atom: 60
+
+hid_dim: 128
+n_layer: 4
+use_dropout: True
+
+batch_size: 64
+learning rate: 8e-06
+
+VanillaMPNN(
+  (embedding): Linear(in_features=33, out_features=128, bias=False)
+  (mpnn_layers): ModuleList(
+    (0): MPNNLayer(
+      (message_make): MPNNMakeMessage(
+        (fc_m): Linear(in_features=261, out_features=128, bias=True)
+      )
+      (fc_h): Linear(in_features=256, out_features=128, bias=False)
+      (dropout): Dropout(p=0.3, inplace=False)
+      (act): SiLU()
+      (gru_cell): GRUCell(128, 128)
+    )
+    (1): MPNNLayer(
+      (message_make): MPNNMakeMessage(
+        (fc_m): Linear(in_features=261, out_features=128, bias=True)
+      )
+      (fc_h): Linear(in_features=256, out_features=128, bias=False)
+      (dropout): Dropout(p=0.3, inplace=False)
+      (act): SiLU()
+      (gru_cell): GRUCell(128, 128)
+    )
+    (2): MPNNLayer(
+      (message_make): MPNNMakeMessage(
+        (fc_m): Linear(in_features=261, out_features=128, bias=True)
+      )
+      (fc_h): Linear(in_features=256, out_features=128, bias=False)
+      (dropout): Dropout(p=0.3, inplace=False)
+      (act): SiLU()
+      (gru_cell): GRUCell(128, 128)
+    )
+    (3): MPNNLayer(
+      (message_make): MPNNMakeMessage(
+        (fc_m): Linear(in_features=261, out_features=128, bias=True)
+      )
+      (fc_h): Linear(in_features=256, out_features=128, bias=False)
+      (dropout): Dropout(p=0.3, inplace=False)
+      (act): SiLU()
+      (gru_cell): GRUCell(128, 128)
+    )
+  )
+  (mpnn_last): MPNNLayer(
+    (message_make): MPNNMakeMessage(
+      (fc_m): Linear(in_features=261, out_features=128, bias=True)
+    )
+    (fc_h): Linear(in_features=256, out_features=128, bias=False)
+    (gru_cell): GRUCell(128, 128)
+  )
+  (fc): Sequential(
+    (0): Linear(in_features=128, out_features=128, bias=True)
+    (1): LeakyReLU(negative_slope=0.01)
+    (2): Dropout(p=0.3, inplace=False)
+    (3): Linear(in_features=128, out_features=2, bias=True)
+  )
+  (act): LeakyReLU(negative_slope=0.01)
+)
+epoch: 0
+precision: 0.0000
+AUROC: 0.6055
+t loss: 0.4582, t acc: 0.8469
+v loss: 0.2020, v acc: 0.9700
+model score: 0.0000
+
+epoch: 1
+precision: 0.0000
+AUROC: 0.6126
+t loss: 0.4099, t acc: 0.8637
+v loss: 0.1596, v acc: 0.9700
+model score: 0.0000
+
+epoch: 2
+precision: 0.0000
+AUROC: 0.6149
+t loss: 0.3982, t acc: 0.8647
+v loss: 0.1784, v acc: 0.9700
+model score: 0.0000
+
+epoch: 3
+precision: 0.0000
+AUROC: 0.6314
+t loss: 0.3934, t acc: 0.8648
+v loss: 0.1895, v acc: 0.9700
+model score: 0.0000
+
+epoch: 4
+precision: 0.0000
+AUROC: 0.6350
+t loss: 0.3900, t acc: 0.8648
+v loss: 0.1866, v acc: 0.9700
+model score: 0.0000
+
+epoch: 5
+precision: 0.0000
+AUROC: 0.6351
+t loss: 0.3880, t acc: 0.8648
+v loss: 0.2003, v acc: 0.9700
+model score: 0.0000
+
+epoch: 6
+precision: 0.0000
+AUROC: 0.6371
+t loss: 0.3865, t acc: 0.8648
+v loss: 0.1965, v acc: 0.9700
+model score: 0.0000
+
+epoch: 7
+precision: 0.0000
+AUROC: 0.6354
+t loss: 0.3872, t acc: 0.8646
+v loss: 0.1812, v acc: 0.9700
+model score: 0.0000
+
+epoch: 8
+precision: 0.0000
+AUROC: 0.6391
+t loss: 0.3849, t acc: 0.8648
+v loss: 0.1899, v acc: 0.9700
+model score: 0.0000
+
+epoch: 9
+precision: 0.1591
+AUROC: 0.6442
+t loss: 0.3830, t acc: 0.8656
+v loss: 0.2184, v acc: 0.9636
+model score: 1.0667
+
+epoch: 10
+precision: 0.0000
+AUROC: 0.6537
+t loss: 0.3836, t acc: 0.8650
+v loss: 0.1922, v acc: 0.9696
+model score: 0.0000
+
+epoch: 11
+precision: 0.0000
+AUROC: 0.6584
+t loss: 0.3821, t acc: 0.8657
+v loss: 0.1913, v acc: 0.9700
+model score: 0.0000
+
+epoch: 12
+precision: 0.1429
+AUROC: 0.6664
+t loss: 0.3800, t acc: 0.8649
+v loss: 0.1840, v acc: 0.9690
+model score: 1.0231
+
+epoch: 13
+precision: 0.2381
+AUROC: 0.6657
+t loss: 0.3786, t acc: 0.8656
+v loss: 0.2004, v acc: 0.9677
+model score: 1.2636
+
+epoch: 14
+precision: 0.2250
+AUROC: 0.6606
+t loss: 0.3766, t acc: 0.8657
+v loss: 0.2208, v acc: 0.9653
+model score: 1.2349
+
+epoch: 15
+precision: 0.2083
+AUROC: 0.6664
+t loss: 0.3776, t acc: 0.8661
+v loss: 0.2041, v acc: 0.9670
+model score: 1.2028
+
+epoch: 16
+precision: 0.2222
+AUROC: 0.6715
+t loss: 0.3742, t acc: 0.8664
+v loss: 0.1872, v acc: 0.9668
+model score: 1.2342
+
+epoch: 17
+precision: 0.2353
+AUROC: 0.6781
+t loss: 0.3746, t acc: 0.8662
+v loss: 0.1794, v acc: 0.9681
+model score: 1.2634
+
+epoch: 18
+precision: 0.2333
+AUROC: 0.6728
+t loss: 0.3733, t acc: 0.8671
+v loss: 0.2120, v acc: 0.9666
+model score: 1.2568
+
+epoch: 19
+precision: 0.0000
+AUROC: 0.6822
+t loss: 0.3751, t acc: 0.8673
+v loss: 0.1557, v acc: 0.9696
+model score: 0.0000
+
+epoch: 20
+precision: 0.0000
+AUROC: 0.6694
+t loss: 0.3806, t acc: 0.8662
+v loss: 0.1486, v acc: 0.9700
+model score: 0.0000
+
+epoch: 21
+precision: 0.0000
+AUROC: 0.6834
+t loss: 0.3770, t acc: 0.8670
+v loss: 0.1646, v acc: 0.9698
+model score: 0.0000
+
+epoch: 22
+precision: 0.2424
+AUROC: 0.6774
+t loss: 0.3734, t acc: 0.8674
+v loss: 0.2069, v acc: 0.9664
+model score: 1.2756
+
+epoch: 23
+precision: 0.2353
+AUROC: 0.6674
+t loss: 0.3707, t acc: 0.8685
+v loss: 0.2105, v acc: 0.9662
+model score: 1.2582
+
+epoch: 24
+precision: 0.3500
+AUROC: 0.6764
+t loss: 0.3695, t acc: 0.8682
+v loss: 0.1825, v acc: 0.9687
+model score: 1.4310
+
+epoch: 25
+precision: 0.2917
+AUROC: 0.6789
+t loss: 0.3680, t acc: 0.8681
+v loss: 0.1795, v acc: 0.9679
+model score: 1.3575
+
+epoch: 26
+precision: 0.2286
+AUROC: 0.6695
+t loss: 0.3676, t acc: 0.8672
+v loss: 0.2147, v acc: 0.9660
+model score: 1.2458
+
+epoch: 27
+precision: 0.3333
+AUROC: 0.6632
+t loss: 0.3709, t acc: 0.8679
+v loss: 0.2060, v acc: 0.9683
+model score: 1.4050
+
+epoch: 28
+precision: 0.4000
+AUROC: 0.6769
+t loss: 0.3686, t acc: 0.8669
+v loss: 0.1973, v acc: 0.9692
+model score: 1.4820
+
+epoch: 29
+precision: 0.4000
+AUROC: 0.6729
+t loss: 0.3636, t acc: 0.8677
+v loss: 0.1777, v acc: 0.9694
+model score: 1.4801
+
+epoch: 30
+precision: 0.4286
+AUROC: 0.6733
+t loss: 0.3620, t acc: 0.8678
+v loss: 0.1669, v acc: 0.9698
+model score: 1.5054
+
+epoch: 31
+precision: 0.4444
+AUROC: 0.6729
+t loss: 0.3644, t acc: 0.8675
+v loss: 0.1702, v acc: 0.9698
+model score: 1.5178
+
+epoch: 32
+precision: 0.3333
+AUROC: 0.6805
+t loss: 0.3625, t acc: 0.8676
+v loss: 0.1905, v acc: 0.9681
+model score: 1.4132
+
+epoch: 33
+precision: 0.2727
+AUROC: 0.6738
+t loss: 0.3596, t acc: 0.8676
+v loss: 0.1877, v acc: 0.9679
+model score: 1.3267
+
+epoch: 34
+precision: 0.3077
+AUROC: 0.6861
+t loss: 0.3603, t acc: 0.8673
+v loss: 0.1763, v acc: 0.9690
+model score: 1.3839
+
+epoch: 35
+precision: 0.2353
+AUROC: 0.6872
+t loss: 0.3583, t acc: 0.8687
+v loss: 0.1763, v acc: 0.9681
+model score: 1.2669
+
+epoch: 36
+precision: 0.2800
+AUROC: 0.6922
+t loss: 0.3569, t acc: 0.8678
+v loss: 0.1832, v acc: 0.9677
+model score: 1.3457
+
+epoch: 37
+precision: 0.2632
+AUROC: 0.6776
+t loss: 0.3556, t acc: 0.8683
+v loss: 0.1692, v acc: 0.9681
+model score: 1.3130
+
+epoch: 38
+precision: 0.3333
+AUROC: 0.6788
+t loss: 0.3562, t acc: 0.8682
+v loss: 0.1615, v acc: 0.9696
+model score: 1.4135
+
+epoch: 39
+precision: 0.2778
+AUROC: 0.6803
+t loss: 0.3537, t acc: 0.8684
+v loss: 0.1838, v acc: 0.9666
+model score: 1.3366
+
+epoch: 40
+precision: 0.2973
+AUROC: 0.6831
+t loss: 0.3536, t acc: 0.8691
+v loss: 0.1966, v acc: 0.9668
+model score: 1.3667
+
+epoch: 41
+precision: 0.2449
+AUROC: 0.6872
+t loss: 0.3513, t acc: 0.8701
+v loss: 0.2002, v acc: 0.9647
+model score: 1.2830
+
+epoch: 42
+precision: 0.2553
+AUROC: 0.6834
+t loss: 0.3496, t acc: 0.8689
+v loss: 0.1891, v acc: 0.9651
+model score: 1.3003
+
+epoch: 43
+precision: 0.2703
+AUROC: 0.6895
+t loss: 0.3480, t acc: 0.8710
+v loss: 0.1772, v acc: 0.9664
+model score: 1.3285
+
+epoch: 44
+precision: 0.3226
+AUROC: 0.6806
+t loss: 0.3466, t acc: 0.8709
+v loss: 0.1716, v acc: 0.9677
+model score: 1.3998
+
+epoch: 45
+precision: 0.3077
+AUROC: 0.6858
+t loss: 0.3469, t acc: 0.8729
+v loss: 0.1711, v acc: 0.9679
+model score: 1.3830
+
+epoch: 46
+precision: 0.2791
+AUROC: 0.6817
+t loss: 0.3432, t acc: 0.8725
+v loss: 0.1718, v acc: 0.9660
+model score: 1.3388
+
+epoch: 47
+precision: 0.3846
+AUROC: 0.6891
+t loss: 0.3443, t acc: 0.8731
+v loss: 0.1704, v acc: 0.9681
+model score: 1.4730
+
+epoch: 48
+precision: 0.2586
+AUROC: 0.6779
+t loss: 0.3449, t acc: 0.8725
+v loss: 0.1866, v acc: 0.9640
+model score: 1.3030
+
+epoch: 49
+precision: 0.3158
+AUROC: 0.6832
+t loss: 0.3423, t acc: 0.8738
+v loss: 0.1851, v acc: 0.9655
+model score: 1.3909
+
+epoch: 50
+precision: 0.2979
+AUROC: 0.6756
+t loss: 0.3396, t acc: 0.8763
+v loss: 0.1736, v acc: 0.9660
+model score: 1.3636
+
+epoch: 51
+precision: 0.4583
+AUROC: 0.6771
+t loss: 0.3407, t acc: 0.8753
+v loss: 0.1550, v acc: 0.9696
+model score: 1.5306
+
+epoch: 52
+precision: 0.3091
+AUROC: 0.6777
+t loss: 0.3389, t acc: 0.8746
+v loss: 0.1716, v acc: 0.9655
+model score: 1.3796
+
+epoch: 53
+precision: 0.3696
+AUROC: 0.6754
+t loss: 0.3389, t acc: 0.8755
+v loss: 0.1728, v acc: 0.9675
+model score: 1.4504
+
+epoch: 54
+precision: 0.3636
+AUROC: 0.6740
+t loss: 0.3360, t acc: 0.8768
+v loss: 0.1718, v acc: 0.9675
+model score: 1.4436
+
+epoch: 55
+precision: 0.3889
+AUROC: 0.6743
+t loss: 0.3340, t acc: 0.8773
+v loss: 0.1606, v acc: 0.9683
+model score: 1.4696
+
+epoch: 56
+precision: 0.3800
+AUROC: 0.6769
+t loss: 0.3350, t acc: 0.8775
+v loss: 0.1652, v acc: 0.9675
+model score: 1.4617
+
+epoch: 57
+precision: 0.4118
+AUROC: 0.6737
+t loss: 0.3329, t acc: 0.8783
+v loss: 0.1506, v acc: 0.9687
+model score: 1.4905
+
+epoch: 58
+precision: 0.3333
+AUROC: 0.6789
+t loss: 0.3317, t acc: 0.8792
+v loss: 0.1581, v acc: 0.9668
+model score: 1.4116
+
+epoch: 59
+precision: 0.3448
+AUROC: 0.6756
+t loss: 0.3304, t acc: 0.8787
+v loss: 0.1633, v acc: 0.9662
+model score: 1.4229
+
+epoch: 60
+precision: 0.3750
+AUROC: 0.6772
+t loss: 0.3315, t acc: 0.8787
+v loss: 0.1635, v acc: 0.9675
+model score: 1.4569
+
+epoch: 61
+precision: 0.3922
+AUROC: 0.6761
+t loss: 0.3302, t acc: 0.8786
+v loss: 0.1647, v acc: 0.9677
+model score: 1.4732
+
+epoch: 62
+precision: 0.4318
+AUROC: 0.6678
+t loss: 0.3261, t acc: 0.8795
+v loss: 0.1613, v acc: 0.9687
+model score: 1.5041
+
+epoch: 63
+precision: 0.3846
+AUROC: 0.6809
+t loss: 0.3274, t acc: 0.8797
+v loss: 0.1635, v acc: 0.9675
+model score: 1.4683
+
+epoch: 64
+precision: 0.3382
+AUROC: 0.6886
+t loss: 0.3271, t acc: 0.8812
+v loss: 0.1682, v acc: 0.9653
+model score: 1.4209
+
+epoch: 65
+precision: 0.3594
+AUROC: 0.6859
+t loss: 0.3249, t acc: 0.8801
+v loss: 0.1792, v acc: 0.9662
+model score: 1.4440
+
+epoch: 66
+precision: 0.3889
+AUROC: 0.6834
+t loss: 0.3263, t acc: 0.8794
+v loss: 0.1679, v acc: 0.9675
+model score: 1.4737
+
+epoch: 67
+precision: 0.3774
+AUROC: 0.6818
+t loss: 0.3217, t acc: 0.8812
+v loss: 0.1670, v acc: 0.9672
+model score: 1.4614
+
+epoch: 68
+precision: 0.3704
+AUROC: 0.6773
+t loss: 0.3220, t acc: 0.8800
+v loss: 0.1699, v acc: 0.9670
+model score: 1.4519
+
+epoch: 69
+precision: 0.3818
+AUROC: 0.6864
+t loss: 0.3207, t acc: 0.8816
+v loss: 0.1692, v acc: 0.9672
+model score: 1.4682
+
+epoch: 70
+precision: 0.3538
+AUROC: 0.6884
+t loss: 0.3214, t acc: 0.8805
+v loss: 0.1728, v acc: 0.9660
+model score: 1.4391
+
+epoch: 71
+precision: 0.3651
+AUROC: 0.6954
+t loss: 0.3175, t acc: 0.8822
+v loss: 0.1678, v acc: 0.9664
+model score: 1.4549
+
+epoch: 72
+precision: 0.3833
+AUROC: 0.6965
+t loss: 0.3189, t acc: 0.8820
+v loss: 0.1713, v acc: 0.9670
+model score: 1.4747
+
+epoch: 73
+precision: 0.3692
+AUROC: 0.7015
+t loss: 0.3213, t acc: 0.8803
+v loss: 0.1635, v acc: 0.9664
+model score: 1.4622
+
+epoch: 74
+precision: 0.3824
+AUROC: 0.7019
+t loss: 0.3174, t acc: 0.8812
+v loss: 0.1617, v acc: 0.9666
+model score: 1.4760
+
+epoch: 75
+precision: 0.3692
+AUROC: 0.7054
+t loss: 0.3162, t acc: 0.8826
+v loss: 0.1658, v acc: 0.9664
+model score: 1.4641
+
+epoch: 76
+precision: 0.3594
+AUROC: 0.7035
+t loss: 0.3180, t acc: 0.8808
+v loss: 0.1640, v acc: 0.9662
+model score: 1.4525
+
+epoch: 77
+precision: 0.3676
+AUROC: 0.6951
+t loss: 0.3175, t acc: 0.8819
+v loss: 0.1784, v acc: 0.9662
+model score: 1.4573
+
+epoch: 78
+precision: 0.3913
+AUROC: 0.7047
+t loss: 0.3125, t acc: 0.8831
+v loss: 0.1644, v acc: 0.9668
+model score: 1.4863
+
+epoch: 79
+precision: 0.3699
+AUROC: 0.7025
+t loss: 0.3143, t acc: 0.8833
+v loss: 0.1750, v acc: 0.9660
+model score: 1.4631
+
+epoch: 80
+precision: 0.4167
+AUROC: 0.7001
+t loss: 0.3120, t acc: 0.8832
+v loss: 0.1624, v acc: 0.9679
+model score: 1.5081
+
+epoch: 81
+precision: 0.3733
+AUROC: 0.6986
+t loss: 0.3112, t acc: 0.8842
+v loss: 0.1779, v acc: 0.9660
+model score: 1.4648
+
+epoch: 82
+precision: 0.4194
+AUROC: 0.7017
+t loss: 0.3108, t acc: 0.8829
+v loss: 0.1650, v acc: 0.9679
+model score: 1.5112
+
+epoch: 83
+precision: 0.3714
+AUROC: 0.7007
+t loss: 0.3078, t acc: 0.8845
+v loss: 0.1709, v acc: 0.9662
+model score: 1.4640
+
+epoch: 84
+precision: 0.3768
+AUROC: 0.7026
+t loss: 0.3089, t acc: 0.8853
+v loss: 0.1761, v acc: 0.9664
+model score: 1.4706
+
+epoch: 85
+precision: 0.3803
+AUROC: 0.7003
+t loss: 0.3078, t acc: 0.8851
+v loss: 0.1731, v acc: 0.9664
+model score: 1.4730
+
+epoch: 86
+precision: 0.3699
+AUROC: 0.7021
+t loss: 0.3108, t acc: 0.8836
+v loss: 0.1711, v acc: 0.9660
+model score: 1.4629
+
+epoch: 87
+precision: 0.4062
+AUROC: 0.6957
+t loss: 0.3072, t acc: 0.8855
+v loss: 0.1688, v acc: 0.9675
+model score: 1.4962
+
+epoch: 88
+precision: 0.3553
+AUROC: 0.7010
+t loss: 0.3080, t acc: 0.8856
+v loss: 0.1763, v acc: 0.9653
+model score: 1.4462
+
+epoch: 89
+precision: 0.3676
+AUROC: 0.7011
+t loss: 0.3062, t acc: 0.8852
+v loss: 0.1633, v acc: 0.9662
+model score: 1.4602
+
+epoch: 90
+precision: 0.3939
+AUROC: 0.7006
+t loss: 0.3053, t acc: 0.8856
+v loss: 0.1705, v acc: 0.9670
+model score: 1.4870
+
+epoch: 91
+precision: 0.3544
+AUROC: 0.7013
+t loss: 0.3031, t acc: 0.8870
+v loss: 0.1700, v acc: 0.9651
+model score: 1.4452
+
+epoch: 92
+precision: 0.3857
+AUROC: 0.6984
+t loss: 0.3031, t acc: 0.8857
+v loss: 0.1722, v acc: 0.9666
+model score: 1.4776
+
+epoch: 93
+precision: 0.3714
+AUROC: 0.7013
+t loss: 0.3032, t acc: 0.8848
+v loss: 0.1696, v acc: 0.9662
+model score: 1.4643
+
+epoch: 94
+precision: 0.3171
+AUROC: 0.7028
+t loss: 0.3026, t acc: 0.8864
+v loss: 0.1689, v acc: 0.9636
+model score: 1.4000
+
+epoch: 95
+precision: 0.3467
+AUROC: 0.6988
+t loss: 0.3016, t acc: 0.8867
+v loss: 0.1670, v acc: 0.9651
+model score: 1.4353
+
+epoch: 96
+precision: 0.3462
+AUROC: 0.6978
+t loss: 0.3011, t acc: 0.8865
+v loss: 0.1721, v acc: 0.9649
+model score: 1.4341
+
+epoch: 97
+precision: 0.3514
+AUROC: 0.6975
+t loss: 0.2988, t acc: 0.8858
+v loss: 0.1714, v acc: 0.9653
+model score: 1.4402
+
+epoch: 98
+precision: 0.3068
+AUROC: 0.6994
+t loss: 0.2990, t acc: 0.8869
+v loss: 0.1816, v acc: 0.9627
+model score: 1.3843
+
+epoch: 99
+precision: 0.3636
+AUROC: 0.6984
+t loss: 0.3001, t acc: 0.8849
+v loss: 0.1677, v acc: 0.9662
+model score: 1.4547
+
+epoch: 100
+precision: 0.3111
+AUROC: 0.7002
+t loss: 0.2985, t acc: 0.8863
+v loss: 0.1790, v acc: 0.9627
+model score: 1.3904
+
+epoch: 101
+precision: 0.3418
+AUROC: 0.6965
+t loss: 0.2971, t acc: 0.8879
+v loss: 0.1717, v acc: 0.9647
+model score: 1.4283
+
+epoch: 102
+precision: 0.3333
+AUROC: 0.6949
+t loss: 0.2954, t acc: 0.8882
+v loss: 0.1790, v acc: 0.9640
+model score: 1.4171
+
+epoch: 103
+precision: 0.3462
+AUROC: 0.6935
+t loss: 0.2962, t acc: 0.8879
+v loss: 0.1772, v acc: 0.9649
+model score: 1.4321
+
+epoch: 104
+precision: 0.3750
+AUROC: 0.6926
+t loss: 0.2936, t acc: 0.8877
+v loss: 0.1734, v acc: 0.9662
+model score: 1.4637
+
+epoch: 105
+precision: 0.3373
+AUROC: 0.6946
+t loss: 0.2936, t acc: 0.8881
+v loss: 0.1760, v acc: 0.9642
+model score: 1.4219
+
+epoch: 106
+precision: 0.3375
+AUROC: 0.6916
+t loss: 0.2941, t acc: 0.8891
+v loss: 0.1778, v acc: 0.9645
+model score: 1.4208
+
+epoch: 107
+precision: 0.3253
+AUROC: 0.6956
+t loss: 0.2934, t acc: 0.8886
+v loss: 0.1763, v acc: 0.9638
+model score: 1.4074
+
+epoch: 108
+precision: 0.3600
+AUROC: 0.6891
+t loss: 0.2943, t acc: 0.8890
+v loss: 0.1803, v acc: 0.9655
+model score: 1.4458
+
+epoch: 109
+precision: 0.3333
+AUROC: 0.6927
+t loss: 0.2892, t acc: 0.8893
+v loss: 0.1782, v acc: 0.9640
+model score: 1.4161
+
+epoch: 110
+precision: 0.3544
+AUROC: 0.6843
+t loss: 0.2901, t acc: 0.8899
+v loss: 0.1798, v acc: 0.9651
+model score: 1.4371
+
+epoch: 111
+precision: 0.3457
+AUROC: 0.6838
+t loss: 0.2920, t acc: 0.8888
+v loss: 0.1796, v acc: 0.9647
+model score: 1.4268
+
+epoch: 112
+precision: 0.3333
+AUROC: 0.6846
+t loss: 0.2877, t acc: 0.8900
+v loss: 0.1809, v acc: 0.9640
+model score: 1.4123
+
+epoch: 113
+precision: 0.3294
+AUROC: 0.6861
+t loss: 0.2880, t acc: 0.8893
+v loss: 0.1775, v acc: 0.9638
+model score: 1.4081
+
+epoch: 114
+precision: 0.3500
+AUROC: 0.6830
+t loss: 0.2902, t acc: 0.8887
+v loss: 0.1807, v acc: 0.9649
+model score: 1.4314
+
+epoch: 115
+precision: 0.3295
+AUROC: 0.6854
+t loss: 0.2877, t acc: 0.8883
+v loss: 0.1832, v acc: 0.9636
+model score: 1.4078
+
+epoch: 116
+precision: 0.3553
+AUROC: 0.6829
+t loss: 0.2842, t acc: 0.8887
+v loss: 0.1727, v acc: 0.9653
+model score: 1.4375
+
+epoch: 117
+precision: 0.3294
+AUROC: 0.6822
+t loss: 0.2868, t acc: 0.8903
+v loss: 0.1839, v acc: 0.9638
+model score: 1.4063
+
+epoch: 118
+precision: 0.3636
+AUROC: 0.6829
+t loss: 0.2861, t acc: 0.8889
+v loss: 0.1752, v acc: 0.9655
+model score: 1.4466
+
+epoch: 119
+precision: 0.3187
+AUROC: 0.6808
+t loss: 0.2851, t acc: 0.8897
+v loss: 0.1874, v acc: 0.9630
+model score: 1.3917
+
+epoch: 120
+precision: 0.3500
+AUROC: 0.6840
+t loss: 0.2835, t acc: 0.8902
+v loss: 0.1776, v acc: 0.9649
+model score: 1.4319
+
+epoch: 121
+precision: 0.3372
+AUROC: 0.6859
+t loss: 0.2809, t acc: 0.8910
+v loss: 0.1824, v acc: 0.9640
+model score: 1.4175
+
+epoch: 122
+precision: 0.3544
+AUROC: 0.6834
+t loss: 0.2823, t acc: 0.8918
+v loss: 0.1781, v acc: 0.9651
+model score: 1.4366
+
+epoch: 123
+precision: 0.3500
+AUROC: 0.6875
+t loss: 0.2816, t acc: 0.8909
+v loss: 0.1786, v acc: 0.9649
+model score: 1.4336
+
+epoch: 124
+precision: 0.3452
+AUROC: 0.6862
+t loss: 0.2836, t acc: 0.8918
+v loss: 0.1795, v acc: 0.9645
+model score: 1.4272
+
+epoch: 125
+precision: 0.3333
+AUROC: 0.6868
+t loss: 0.2813, t acc: 0.8905
+v loss: 0.1862, v acc: 0.9636
+model score: 1.4130
+
+epoch: 126
+precision: 0.3258
+AUROC: 0.6876
+t loss: 0.2790, t acc: 0.8907
+v loss: 0.1781, v acc: 0.9634
+model score: 1.4041
+
+epoch: 127
+precision: 0.3261
+AUROC: 0.6883
+t loss: 0.2787, t acc: 0.8912
+v loss: 0.1824, v acc: 0.9632
+model score: 1.4046
+
+epoch: 128
+precision: 0.3444
+AUROC: 0.6864
+t loss: 0.2793, t acc: 0.8917
+v loss: 0.1807, v acc: 0.9640
+model score: 1.4261
+
+epoch: 129
+precision: 0.3483
+AUROC: 0.6872
+t loss: 0.2799, t acc: 0.8899
+v loss: 0.1820, v acc: 0.9642
+model score: 1.4311
+
+epoch: 130
+precision: 0.3563
+AUROC: 0.6884
+t loss: 0.2805, t acc: 0.8913
+v loss: 0.1819, v acc: 0.9647
+model score: 1.4408
+
+epoch: 131
+precision: 0.3131
+AUROC: 0.6921
+t loss: 0.2769, t acc: 0.8929
+v loss: 0.1836, v acc: 0.9621
+model score: 1.3891
+
+epoch: 132
+precision: 0.3333
+AUROC: 0.6874
+t loss: 0.2781, t acc: 0.8923
+v loss: 0.1841, v acc: 0.9634
+model score: 1.4132
+
+epoch: 133
+precision: 0.3298
+AUROC: 0.6900
+t loss: 0.2774, t acc: 0.8922
+v loss: 0.1841, v acc: 0.9632
+model score: 1.4099
+
+epoch: 134
+precision: 0.3232
+AUROC: 0.6891
+t loss: 0.2757, t acc: 0.8926
+v loss: 0.1865, v acc: 0.9625
+model score: 1.4009
+
+epoch: 135
+precision: 0.3511
+AUROC: 0.6846
+t loss: 0.2748, t acc: 0.8919
+v loss: 0.1882, v acc: 0.9640
+model score: 1.4327
+
+epoch: 136
+precision: 0.3370
+AUROC: 0.6857
+t loss: 0.2740, t acc: 0.8920
+v loss: 0.1842, v acc: 0.9636
+model score: 1.4168
+
+epoch: 137
+precision: 0.3587
+AUROC: 0.6828
+t loss: 0.2742, t acc: 0.8929
+v loss: 0.1897, v acc: 0.9645
+model score: 1.4405
+
+epoch: 138
+precision: 0.3678
+AUROC: 0.6829
+t loss: 0.2725, t acc: 0.8931
+v loss: 0.1862, v acc: 0.9651
+model score: 1.4507
+
+epoch: 139
+precision: 0.3647
+AUROC: 0.6817
+t loss: 0.2717, t acc: 0.8920
+v loss: 0.1873, v acc: 0.9651
+model score: 1.4468
+
+epoch: 140
+precision: 0.3529
+AUROC: 0.6821
+t loss: 0.2704, t acc: 0.8933
+v loss: 0.1841, v acc: 0.9647
+model score: 1.4340
+
+epoch: 141
+precision: 0.3721
+AUROC: 0.6782
+t loss: 0.2712, t acc: 0.8934
+v loss: 0.1892, v acc: 0.9653
+model score: 1.4529
+
+epoch: 142
+precision: 0.3647
+AUROC: 0.6791
+t loss: 0.2708, t acc: 0.8936
+v loss: 0.1880, v acc: 0.9651
+model score: 1.4455
+
+epoch: 143
+precision: 0.3605
+AUROC: 0.6772
+t loss: 0.2707, t acc: 0.8939
+v loss: 0.1886, v acc: 0.9649
+model score: 1.4399
+
+epoch: 144
+precision: 0.3614
+AUROC: 0.6779
+t loss: 0.2710, t acc: 0.8937
+v loss: 0.1885, v acc: 0.9651
+model score: 1.4415
+
+epoch: 145
+precision: 0.3516
+AUROC: 0.6763
+t loss: 0.2705, t acc: 0.8936
+v loss: 0.1942, v acc: 0.9642
+model score: 1.4295
+
+epoch: 146
+precision: 0.3605
+AUROC: 0.6790
+t loss: 0.2693, t acc: 0.8943
+v loss: 0.1847, v acc: 0.9649
+model score: 1.4408
+
+epoch: 147
+precision: 0.3137
+AUROC: 0.6760
+t loss: 0.2700, t acc: 0.8918
+v loss: 0.1972, v acc: 0.9619
+model score: 1.3824
+
+epoch: 148
+precision: 0.3483
+AUROC: 0.6784
+t loss: 0.2684, t acc: 0.8934
+v loss: 0.1873, v acc: 0.9642
+model score: 1.4268
+
+epoch: 149
+precision: 0.3368
+AUROC: 0.6742
+t loss: 0.2668, t acc: 0.8938
+v loss: 0.1978, v acc: 0.9634
+model score: 1.4110
+
+epoch: 150
+precision: 0.3596
+AUROC: 0.6735
+t loss: 0.2666, t acc: 0.8952
+v loss: 0.1894, v acc: 0.9647
+model score: 1.4369
+
+epoch: 151
+precision: 0.3370
+AUROC: 0.6737
+t loss: 0.2649, t acc: 0.8949
+v loss: 0.1925, v acc: 0.9636
+model score: 1.4111
+
+epoch: 152
+precision: 0.3556
+AUROC: 0.6739
+t loss: 0.2658, t acc: 0.8942
+v loss: 0.1948, v acc: 0.9645
+model score: 1.4327
+
+epoch: 153
+precision: 0.3523
+AUROC: 0.6745
+t loss: 0.2631, t acc: 0.8960
+v loss: 0.1918, v acc: 0.9645
+model score: 1.4294
+
+epoch: 154
+precision: 0.3483
+AUROC: 0.6724
+t loss: 0.2638, t acc: 0.8961
+v loss: 0.1936, v acc: 0.9642
+model score: 1.4238
+
+epoch: 155
+precision: 0.3407
+AUROC: 0.6750
+t loss: 0.2632, t acc: 0.8943
+v loss: 0.1921, v acc: 0.9638
+model score: 1.4161
+
+epoch: 156
+precision: 0.3438
+AUROC: 0.6710
+t loss: 0.2641, t acc: 0.8943
+v loss: 0.1972, v acc: 0.9636
+model score: 1.4176
+
+epoch: 157
+precision: 0.3488
+AUROC: 0.6753
+t loss: 0.2655, t acc: 0.8945
+v loss: 0.1882, v acc: 0.9645
+model score: 1.4260
+
+epoch: 158
+precision: 0.3263
+AUROC: 0.6723
+t loss: 0.2638, t acc: 0.8948
+v loss: 0.1998, v acc: 0.9630
+model score: 1.3972
+
+epoch: 159
+precision: 0.3452
+AUROC: 0.6722
+t loss: 0.2607, t acc: 0.8965
+v loss: 0.1886, v acc: 0.9645
+model score: 1.4204
+
+epoch: 160
+precision: 0.3200
+AUROC: 0.6721
+t loss: 0.2632, t acc: 0.8957
+v loss: 0.1957, v acc: 0.9623
+model score: 1.3888
+
+epoch: 161
+precision: 0.3265
+AUROC: 0.6727
+t loss: 0.2608, t acc: 0.8965
+v loss: 0.1947, v acc: 0.9627
+model score: 1.3975
+
+epoch: 162
+precision: 0.3368
+AUROC: 0.6710
+t loss: 0.2614, t acc: 0.8960
+v loss: 0.1947, v acc: 0.9634
+model score: 1.4094
+
+epoch: 163
+precision: 0.3516
+AUROC: 0.6707
+t loss: 0.2619, t acc: 0.8952
+v loss: 0.1938, v acc: 0.9642
+model score: 1.4267
+
+epoch: 164
+precision: 0.3444
+AUROC: 0.6691
+t loss: 0.2605, t acc: 0.8962
+v loss: 0.1970, v acc: 0.9640
+model score: 1.4177
+
+epoch: 165
+precision: 0.3448
+AUROC: 0.6702
+t loss: 0.2612, t acc: 0.8966
+v loss: 0.1952, v acc: 0.9642
+model score: 1.4188
+
+epoch: 166
+precision: 0.3488
+AUROC: 0.6698
+t loss: 0.2600, t acc: 0.8962
+v loss: 0.1962, v acc: 0.9645
+model score: 1.4232
+
+epoch: 167
+precision: 0.3265
+AUROC: 0.6707
+t loss: 0.2603, t acc: 0.8964
+v loss: 0.1990, v acc: 0.9627
+model score: 1.3965
+
+epoch: 168
+precision: 0.3596
+AUROC: 0.6679
+t loss: 0.2606, t acc: 0.8967
+v loss: 0.1959, v acc: 0.9647
+model score: 1.4341
+
+epoch: 169
+precision: 0.3596
+AUROC: 0.6688
+t loss: 0.2595, t acc: 0.8961
+v loss: 0.1968, v acc: 0.9647
+model score: 1.4345
+
+epoch: 170
+precision: 0.3708
+AUROC: 0.6686
+t loss: 0.2588, t acc: 0.8973
+v loss: 0.1977, v acc: 0.9651
+model score: 1.4464
+
+epoch: 171
+precision: 0.3656
+AUROC: 0.6700
+t loss: 0.2577, t acc: 0.8975
+v loss: 0.1961, v acc: 0.9647
+model score: 1.4415
+
+epoch: 172
+precision: 0.3626
+AUROC: 0.6685
+t loss: 0.2593, t acc: 0.8969
+v loss: 0.1962, v acc: 0.9647
+model score: 1.4376
+
+epoch: 173
+precision: 0.3587
+AUROC: 0.6684
+t loss: 0.2576, t acc: 0.8972
+v loss: 0.1985, v acc: 0.9645
+model score: 1.4333
+
+epoch: 174
+precision: 0.3587
+AUROC: 0.6696
+t loss: 0.2550, t acc: 0.8986
+v loss: 0.1954, v acc: 0.9645
+model score: 1.4339
+
+epoch: 175
+precision: 0.3656
+AUROC: 0.6674
+t loss: 0.2571, t acc: 0.8978
+v loss: 0.2003, v acc: 0.9647
+model score: 1.4401
+
+epoch: 176
+precision: 0.3587
+AUROC: 0.6683
+t loss: 0.2564, t acc: 0.8977
+v loss: 0.1985, v acc: 0.9645
+model score: 1.4332
+
+epoch: 177
+precision: 0.3474
+AUROC: 0.6685
+t loss: 0.2575, t acc: 0.8983
+v loss: 0.2007, v acc: 0.9638
+model score: 1.4205
+
+epoch: 178
+precision: 0.3656
+AUROC: 0.6685
+t loss: 0.2555, t acc: 0.8965
+v loss: 0.1986, v acc: 0.9647
+model score: 1.4407
+
+epoch: 179
+precision: 0.3736
+AUROC: 0.6671
+t loss: 0.2549, t acc: 0.8990
+v loss: 0.2019, v acc: 0.9651
+model score: 1.4485
+
+epoch: 180
+precision: 0.3474
+AUROC: 0.6694
+t loss: 0.2544, t acc: 0.8979
+v loss: 0.2035, v acc: 0.9638
+model score: 1.4210
+
+epoch: 181
+precision: 0.3656
+AUROC: 0.6687
+t loss: 0.2577, t acc: 0.8989
+v loss: 0.1999, v acc: 0.9647
+model score: 1.4408
+
+epoch: 182
+precision: 0.3579
+AUROC: 0.6697
+t loss: 0.2528, t acc: 0.8974
+v loss: 0.2018, v acc: 0.9642
+model score: 1.4329
+
+epoch: 183
+precision: 0.3656
+AUROC: 0.6702
+t loss: 0.2550, t acc: 0.8979
+v loss: 0.1990, v acc: 0.9647
+model score: 1.4416
+
+epoch: 184
+precision: 0.3723
+AUROC: 0.6687
+t loss: 0.2520, t acc: 0.8994
+v loss: 0.2026, v acc: 0.9649
+model score: 1.4479
+
+epoch: 185
+precision: 0.3696
+AUROC: 0.6702
+t loss: 0.2517, t acc: 0.8971
+v loss: 0.2018, v acc: 0.9649
+model score: 1.4458
+
+epoch: 186
+precision: 0.3587
+AUROC: 0.6704
+t loss: 0.2497, t acc: 0.8988
+v loss: 0.2022, v acc: 0.9645
+model score: 1.4343
+
+epoch: 187
+precision: 0.3617
+AUROC: 0.6716
+t loss: 0.2519, t acc: 0.8984
+v loss: 0.2004, v acc: 0.9645
+model score: 1.4381
+
+epoch: 188
+precision: 0.3646
+AUROC: 0.6719
+t loss: 0.2494, t acc: 0.8991
+v loss: 0.2012, v acc: 0.9645
+model score: 1.4413
+
+epoch: 189
+precision: 0.3571
+AUROC: 0.6719
+t loss: 0.2481, t acc: 0.8996
+v loss: 0.2032, v acc: 0.9640
+model score: 1.4331
+
+epoch: 190
+precision: 0.3535
+AUROC: 0.6703
+t loss: 0.2501, t acc: 0.8990
+v loss: 0.2052, v acc: 0.9638
+model score: 1.4282
+
+epoch: 191
+precision: 0.3684
+AUROC: 0.6697
+t loss: 0.2513, t acc: 0.8988
+v loss: 0.2020, v acc: 0.9647
+model score: 1.4443
+
+epoch: 192
+precision: 0.3646
+AUROC: 0.6693
+t loss: 0.2494, t acc: 0.9000
+v loss: 0.2057, v acc: 0.9645
+model score: 1.4399
+
+epoch: 193
+precision: 0.3723
+AUROC: 0.6690
+t loss: 0.2495, t acc: 0.9005
+v loss: 0.2031, v acc: 0.9649
+model score: 1.4480
+
+epoch: 194
+precision: 0.3646
+AUROC: 0.6685
+t loss: 0.2476, t acc: 0.9009
+v loss: 0.2040, v acc: 0.9645
+model score: 1.4395
+
+epoch: 195
+precision: 0.3600
+AUROC: 0.6688
+t loss: 0.2462, t acc: 0.9004
+v loss: 0.2046, v acc: 0.9640
+model score: 1.4346
+
+epoch: 196
+precision: 0.3636
+AUROC: 0.6682
+t loss: 0.2479, t acc: 0.9007
+v loss: 0.2059, v acc: 0.9642
+model score: 1.4382
+
+epoch: 197
+precision: 0.3579
+AUROC: 0.6681
+t loss: 0.2483, t acc: 0.8990
+v loss: 0.2044, v acc: 0.9642
+model score: 1.4321
+
+epoch: 198
+precision: 0.3469
+AUROC: 0.6689
+t loss: 0.2471, t acc: 0.9000
+v loss: 0.2059, v acc: 0.9636
+model score: 1.4201
+
+epoch: 199
+precision: 0.3571
+AUROC: 0.6678
+t loss: 0.2476, t acc: 0.9002
+v loss: 0.2066, v acc: 0.9640
+model score: 1.4310
+
+epoch: 200
+precision: 0.3608
+AUROC: 0.6677
+t loss: 0.2464, t acc: 0.9002
+v loss: 0.2052, v acc: 0.9642
+model score: 1.4350
+
+epoch: 201
+precision: 0.3431
+AUROC: 0.6682
+t loss: 0.2463, t acc: 0.9011
+v loss: 0.2089, v acc: 0.9632
+model score: 1.4152
+
+epoch: 202
+precision: 0.3535
+AUROC: 0.6678
+t loss: 0.2494, t acc: 0.9001
+v loss: 0.2068, v acc: 0.9638
+model score: 1.4270
+
+epoch: 203
+precision: 0.3608
+AUROC: 0.6674
+t loss: 0.2467, t acc: 0.8989
+v loss: 0.2058, v acc: 0.9642
+model score: 1.4348
+
+epoch: 204
+precision: 0.3636
+AUROC: 0.6684
+t loss: 0.2448, t acc: 0.9000
+v loss: 0.2075, v acc: 0.9642
+model score: 1.4383
+
+epoch: 205
+precision: 0.3500
+AUROC: 0.6691
+t loss: 0.2451, t acc: 0.9028
+v loss: 0.2096, v acc: 0.9636
+model score: 1.4236
+
+epoch: 206
+precision: 0.3500
+AUROC: 0.6687
+t loss: 0.2491, t acc: 0.9008
+v loss: 0.2073, v acc: 0.9636
+model score: 1.4234
+
+epoch: 207
+precision: 0.3535
+AUROC: 0.6674
+t loss: 0.2418, t acc: 0.9021
+v loss: 0.2078, v acc: 0.9638
+model score: 1.4268
+
+epoch: 208
+precision: 0.3500
+AUROC: 0.6675
+t loss: 0.2442, t acc: 0.9034
+v loss: 0.2069, v acc: 0.9636
+model score: 1.4228
+
+epoch: 209
+precision: 0.3465
+AUROC: 0.6673
+t loss: 0.2443, t acc: 0.9003
+v loss: 0.2083, v acc: 0.9634
+model score: 1.4187
+
+epoch: 210
+precision: 0.3431
+AUROC: 0.6668
+t loss: 0.2448, t acc: 0.9013
+v loss: 0.2081, v acc: 0.9632
+model score: 1.4145
+
+epoch: 211
+precision: 0.3462
+AUROC: 0.6669
+t loss: 0.2420, t acc: 0.9018
+v loss: 0.2091, v acc: 0.9632
+model score: 1.4179
+
+epoch: 212
+precision: 0.3495
+AUROC: 0.6664
+t loss: 0.2432, t acc: 0.9015
+v loss: 0.2085, v acc: 0.9634
+model score: 1.4215
+
+epoch: 213
+precision: 0.3600
+AUROC: 0.6662
+t loss: 0.2442, t acc: 0.9004
+v loss: 0.2076, v acc: 0.9640
+model score: 1.4332
+
+epoch: 214
+precision: 0.3564
+AUROC: 0.6654
+t loss: 0.2425, t acc: 0.9026
+v loss: 0.2099, v acc: 0.9638
+model score: 1.4289
+
+epoch: 215
+precision: 0.3636
+AUROC: 0.6653
+t loss: 0.2422, t acc: 0.9012
+v loss: 0.2080, v acc: 0.9642
+model score: 1.4367
+
+epoch: 216
+precision: 0.3663
+AUROC: 0.6645
+t loss: 0.2417, t acc: 0.9016
+v loss: 0.2116, v acc: 0.9642
+model score: 1.4391
+
+epoch: 217
+precision: 0.3663
+AUROC: 0.6646
+t loss: 0.2428, t acc: 0.9035
+v loss: 0.2114, v acc: 0.9642
+model score: 1.4392
+
+epoch: 218
+precision: 0.3592
+AUROC: 0.6645
+t loss: 0.2394, t acc: 0.9041
+v loss: 0.2125, v acc: 0.9638
+model score: 1.4314
+
+epoch: 219
+precision: 0.3558
+AUROC: 0.6642
+t loss: 0.2409, t acc: 0.9035
+v loss: 0.2137, v acc: 0.9636
+model score: 1.4274
+
+epoch: 220
+precision: 0.3663
+AUROC: 0.6640
+t loss: 0.2421, t acc: 0.9025
+v loss: 0.2121, v acc: 0.9642
+model score: 1.4388
+
+epoch: 221
+precision: 0.3663
+AUROC: 0.6647
+t loss: 0.2422, t acc: 0.9030
+v loss: 0.2095, v acc: 0.9642
+model score: 1.4392
+
+epoch: 222
+precision: 0.3689
+AUROC: 0.6646
+t loss: 0.2386, t acc: 0.9044
+v loss: 0.2121, v acc: 0.9642
+model score: 1.4418
+
+epoch: 223
+precision: 0.3689
+AUROC: 0.6641
+t loss: 0.2396, t acc: 0.9058
+v loss: 0.2139, v acc: 0.9642
+model score: 1.4416
+
+epoch: 224
+precision: 0.3762
+AUROC: 0.6637
+t loss: 0.2420, t acc: 0.9050
+v loss: 0.2148, v acc: 0.9647
+model score: 1.4490
+
+epoch: 225
+precision: 0.3592
+AUROC: 0.6641
+t loss: 0.2373, t acc: 0.9030
+v loss: 0.2138, v acc: 0.9638
+model score: 1.4311
+
+epoch: 226
+precision: 0.3592
+AUROC: 0.6639
+t loss: 0.2372, t acc: 0.9045
+v loss: 0.2124, v acc: 0.9638
+model score: 1.4310
+
+epoch: 227
+precision: 0.3663
+AUROC: 0.6630
+t loss: 0.2363, t acc: 0.9041
+v loss: 0.2134, v acc: 0.9642
+model score: 1.4383
+
+epoch: 228
+precision: 0.3558
+AUROC: 0.6625
+t loss: 0.2401, t acc: 0.9048
+v loss: 0.2154, v acc: 0.9636
+model score: 1.4265
+
+epoch: 229
+precision: 0.3558
+AUROC: 0.6622
+t loss: 0.2378, t acc: 0.9032
+v loss: 0.2156, v acc: 0.9636
+model score: 1.4263
+
+epoch: 230
+precision: 0.3627
+AUROC: 0.6622
+t loss: 0.2398, t acc: 0.9029
+v loss: 0.2149, v acc: 0.9640
+model score: 1.4340
+
+epoch: 231
+precision: 0.3700
+AUROC: 0.6621
+t loss: 0.2393, t acc: 0.9044
+v loss: 0.2148, v acc: 0.9645
+model score: 1.4417
+
+epoch: 232
+precision: 0.3592
+AUROC: 0.6618
+t loss: 0.2405, t acc: 0.9023
+v loss: 0.2169, v acc: 0.9638
+model score: 1.4300
+
+epoch: 233
+precision: 0.3700
+AUROC: 0.6616
+t loss: 0.2378, t acc: 0.9048
+v loss: 0.2164, v acc: 0.9645
+model score: 1.4415
+
+epoch: 234
+precision: 0.3737
+AUROC: 0.6615
+t loss: 0.2362, t acc: 0.9039
+v loss: 0.2147, v acc: 0.9647
+model score: 1.4453
+
+epoch: 235
+precision: 0.3762
+AUROC: 0.6614
+t loss: 0.2364, t acc: 0.9047
+v loss: 0.2167, v acc: 0.9647
+model score: 1.4477
+
+epoch: 236
+precision: 0.3725
+AUROC: 0.6611
+t loss: 0.2363, t acc: 0.9041
+v loss: 0.2186, v acc: 0.9645
+model score: 1.4437
+
+epoch: 237
+precision: 0.3725
+AUROC: 0.6612
+t loss: 0.2359, t acc: 0.9046
+v loss: 0.2168, v acc: 0.9645
+model score: 1.4438
+
+epoch: 238
+precision: 0.3838
+AUROC: 0.6615
+t loss: 0.2354, t acc: 0.9054
+v loss: 0.2165, v acc: 0.9651
+model score: 1.4555
+
+epoch: 239
+precision: 0.3700
+AUROC: 0.6620
+t loss: 0.2381, t acc: 0.9029
+v loss: 0.2167, v acc: 0.9645
+model score: 1.4417
+
+epoch: 240
+precision: 0.3737
+AUROC: 0.6624
+t loss: 0.2336, t acc: 0.9042
+v loss: 0.2156, v acc: 0.9647
+model score: 1.4458
+
+epoch: 241
+precision: 0.3700
+AUROC: 0.6622
+t loss: 0.2338, t acc: 0.9066
+v loss: 0.2176, v acc: 0.9645
+model score: 1.4418
+
+epoch: 242
+precision: 0.3737
+AUROC: 0.6621
+t loss: 0.2340, t acc: 0.9068
+v loss: 0.2178, v acc: 0.9647
+model score: 1.4457
+
+epoch: 243
+precision: 0.3776
+AUROC: 0.6623
+t loss: 0.2334, t acc: 0.9054
+v loss: 0.2171, v acc: 0.9649
+model score: 1.4497
+
+epoch: 244
+precision: 0.3776
+AUROC: 0.6623
+t loss: 0.2361, t acc: 0.9032
+v loss: 0.2179, v acc: 0.9649
+model score: 1.4497
+
+epoch: 245
+precision: 0.3700
+AUROC: 0.6620
+t loss: 0.2329, t acc: 0.9051
+v loss: 0.2189, v acc: 0.9645
+model score: 1.4417
+
+epoch: 246
+precision: 0.3700
+AUROC: 0.6621
+t loss: 0.2324, t acc: 0.9066
+v loss: 0.2188, v acc: 0.9645
+model score: 1.4417
+
+epoch: 247
+precision: 0.3737
+AUROC: 0.6624
+t loss: 0.2347, t acc: 0.9046
+v loss: 0.2185, v acc: 0.9647
+model score: 1.4458
+
+epoch: 248
+precision: 0.3627
+AUROC: 0.6625
+t loss: 0.2359, t acc: 0.9051
+v loss: 0.2189, v acc: 0.9640
+model score: 1.4342
+
+epoch: 249
+precision: 0.3627
+AUROC: 0.6624
+t loss: 0.2327, t acc: 0.9051
+v loss: 0.2191, v acc: 0.9640
+model score: 1.4341
+
+epoch: 250
+precision: 0.3627
+AUROC: 0.6623
+t loss: 0.2328, t acc: 0.9060
+v loss: 0.2196, v acc: 0.9640
+model score: 1.4341
+
+epoch: 251
+precision: 0.3663
+AUROC: 0.6623
+t loss: 0.2333, t acc: 0.9034
+v loss: 0.2197, v acc: 0.9642
+model score: 1.4379
+
+epoch: 252
+precision: 0.3663
+AUROC: 0.6620
+t loss: 0.2321, t acc: 0.9072
+v loss: 0.2213, v acc: 0.9642
+model score: 1.4378
+
+epoch: 253
+precision: 0.3663
+AUROC: 0.6618
+t loss: 0.2313, t acc: 0.9063
+v loss: 0.2208, v acc: 0.9642
+model score: 1.4377
+
+epoch: 254
+precision: 0.3627
+AUROC: 0.6618
+t loss: 0.2333, t acc: 0.9066
+v loss: 0.2209, v acc: 0.9640
+model score: 1.4338
+
+epoch: 255
+precision: 0.3558
+AUROC: 0.6613
+t loss: 0.2339, t acc: 0.9053
+v loss: 0.2218, v acc: 0.9636
+model score: 1.4259
+
+epoch: 256
+precision: 0.3524
+AUROC: 0.6615
+t loss: 0.2304, t acc: 0.9072
+v loss: 0.2216, v acc: 0.9634
+model score: 1.4221
+
+epoch: 257
+precision: 0.3495
+AUROC: 0.6613
+t loss: 0.2310, t acc: 0.9071
+v loss: 0.2214, v acc: 0.9634
+model score: 1.4189
+
+epoch: 258
+precision: 0.3673
+AUROC: 0.6613
+t loss: 0.2290, t acc: 0.9079
+v loss: 0.2208, v acc: 0.9645
+model score: 1.4386
+
+epoch: 259
+precision: 0.3600
+AUROC: 0.6616
+t loss: 0.2303, t acc: 0.9071
+v loss: 0.2218, v acc: 0.9640
+model score: 1.4308
+
+epoch: 260
+precision: 0.3529
+AUROC: 0.6617
+t loss: 0.2284, t acc: 0.9100
+v loss: 0.2223, v acc: 0.9636
+model score: 1.4230
+
+epoch: 261
+precision: 0.3558
+AUROC: 0.6620
+t loss: 0.2303, t acc: 0.9069
+v loss: 0.2229, v acc: 0.9636
+model score: 1.4262
+
+epoch: 262
+precision: 0.3491
+AUROC: 0.6623
+t loss: 0.2315, t acc: 0.9049
+v loss: 0.2219, v acc: 0.9632
+model score: 1.4188
+
+epoch: 263
+precision: 0.3592
+AUROC: 0.6628
+t loss: 0.2284, t acc: 0.9093
+v loss: 0.2218, v acc: 0.9638
+model score: 1.4305
+
+epoch: 264
+precision: 0.3558
+AUROC: 0.6626
+t loss: 0.2307, t acc: 0.9082
+v loss: 0.2233, v acc: 0.9636
+model score: 1.4265
+
+epoch: 265
+precision: 0.3592
+AUROC: 0.6625
+t loss: 0.2297, t acc: 0.9083
+v loss: 0.2240, v acc: 0.9638
+model score: 1.4303
+
+epoch: 266
+precision: 0.3585
+AUROC: 0.6627
+t loss: 0.2299, t acc: 0.9059
+v loss: 0.2232, v acc: 0.9636
+model score: 1.4295
+
+epoch: 267
+precision: 0.3585
+AUROC: 0.6625
+t loss: 0.2316, t acc: 0.9068
+v loss: 0.2228, v acc: 0.9636
+model score: 1.4294
+
+epoch: 268
+precision: 0.3619
+AUROC: 0.6622
+t loss: 0.2299, t acc: 0.9070
+v loss: 0.2245, v acc: 0.9638
+model score: 1.4330
+
+epoch: 269
+precision: 0.3654
+AUROC: 0.6622
+t loss: 0.2272, t acc: 0.9071
+v loss: 0.2249, v acc: 0.9640
+model score: 1.4367
+
+epoch: 270
+precision: 0.3619
+AUROC: 0.6623
+t loss: 0.2297, t acc: 0.9066
+v loss: 0.2239, v acc: 0.9638
+model score: 1.4330
+
+epoch: 271
+precision: 0.3619
+AUROC: 0.6623
+t loss: 0.2293, t acc: 0.9086
+v loss: 0.2239, v acc: 0.9638
+model score: 1.4330
+
+epoch: 272
+precision: 0.3551
+AUROC: 0.6621
+t loss: 0.2256, t acc: 0.9090
+v loss: 0.2246, v acc: 0.9634
+model score: 1.4254
+
+epoch: 273
+precision: 0.3585
+AUROC: 0.6622
+t loss: 0.2285, t acc: 0.9086
+v loss: 0.2241, v acc: 0.9636
+model score: 1.4292
+
+epoch: 274
+precision: 0.3486
+AUROC: 0.6620
+t loss: 0.2269, t acc: 0.9085
+v loss: 0.2260, v acc: 0.9630
+model score: 1.4180
+
+epoch: 275
+precision: 0.3455
+AUROC: 0.6622
+t loss: 0.2268, t acc: 0.9083
+v loss: 0.2268, v acc: 0.9627
+model score: 1.4144
+
+epoch: 276
+precision: 0.3455
+AUROC: 0.6621
+t loss: 0.2295, t acc: 0.9079
+v loss: 0.2271, v acc: 0.9627
+model score: 1.4144
+
+epoch: 277
+precision: 0.3519
+AUROC: 0.6623
+t loss: 0.2282, t acc: 0.9082
+v loss: 0.2257, v acc: 0.9632
+model score: 1.4218
+
+epoch: 278
+precision: 0.3551
+AUROC: 0.6624
+t loss: 0.2288, t acc: 0.9081
+v loss: 0.2250, v acc: 0.9634
+model score: 1.4256
+
+epoch: 279
+precision: 0.3519
+AUROC: 0.6629
+t loss: 0.2259, t acc: 0.9073
+v loss: 0.2251, v acc: 0.9632
+model score: 1.4221
+
+epoch: 280
+precision: 0.3519
+AUROC: 0.6632
+t loss: 0.2268, t acc: 0.9097
+v loss: 0.2253, v acc: 0.9632
+model score: 1.4223
+
+epoch: 281
+precision: 0.3455
+AUROC: 0.6632
+t loss: 0.2269, t acc: 0.9085
+v loss: 0.2252, v acc: 0.9627
+model score: 1.4149
+
+epoch: 282
+precision: 0.3585
+AUROC: 0.6629
+t loss: 0.2280, t acc: 0.9088
+v loss: 0.2247, v acc: 0.9636
+model score: 1.4296
+
+epoch: 283
+precision: 0.3486
+AUROC: 0.6626
+t loss: 0.2263, t acc: 0.9064
+v loss: 0.2258, v acc: 0.9630
+model score: 1.4183
+
+epoch: 284
+precision: 0.3585
+AUROC: 0.6625
+t loss: 0.2258, t acc: 0.9085
+v loss: 0.2256, v acc: 0.9636
+model score: 1.4294
+
+epoch: 285
+precision: 0.3551
+AUROC: 0.6620
+t loss: 0.2224, t acc: 0.9082
+v loss: 0.2262, v acc: 0.9634
+model score: 1.4254
+
+epoch: 286
+precision: 0.3519
+AUROC: 0.6616
+t loss: 0.2262, t acc: 0.9074
+v loss: 0.2278, v acc: 0.9632
+model score: 1.4215
+
+epoch: 287
+precision: 0.3486
+AUROC: 0.6617
+t loss: 0.2264, t acc: 0.9082
+v loss: 0.2283, v acc: 0.9630
+model score: 1.4178
+
+epoch: 288
+precision: 0.3519
+AUROC: 0.6615
+t loss: 0.2261, t acc: 0.9095
+v loss: 0.2282, v acc: 0.9632
+model score: 1.4214
+
+epoch: 289
+precision: 0.3486
+AUROC: 0.6616
+t loss: 0.2256, t acc: 0.9084
+v loss: 0.2280, v acc: 0.9630
+model score: 1.4178
+
+epoch: 290
+precision: 0.3455
+AUROC: 0.6616
+t loss: 0.2247, t acc: 0.9103
+v loss: 0.2285, v acc: 0.9627
+model score: 1.4141
+
+epoch: 291
+precision: 0.3423
+AUROC: 0.6615
+t loss: 0.2278, t acc: 0.9077
+v loss: 0.2290, v acc: 0.9625
+model score: 1.4104
+
+epoch: 292
+precision: 0.3455
+AUROC: 0.6616
+t loss: 0.2266, t acc: 0.9083
+v loss: 0.2279, v acc: 0.9627
+model score: 1.4141
+
+epoch: 293
+precision: 0.3455
+AUROC: 0.6618
+t loss: 0.2212, t acc: 0.9098
+v loss: 0.2275, v acc: 0.9627
+model score: 1.4142
+
+epoch: 294
+precision: 0.3423
+AUROC: 0.6620
+t loss: 0.2232, t acc: 0.9096
+v loss: 0.2278, v acc: 0.9625
+model score: 1.4107
+
+epoch: 295
+precision: 0.3423
+AUROC: 0.6622
+t loss: 0.2233, t acc: 0.9104
+v loss: 0.2272, v acc: 0.9625
+model score: 1.4108
+
+epoch: 296
+precision: 0.3423
+AUROC: 0.6623
+t loss: 0.2256, t acc: 0.9092
+v loss: 0.2266, v acc: 0.9625
+model score: 1.4108
+
+epoch: 297
+precision: 0.3393
+AUROC: 0.6623
+t loss: 0.2256, t acc: 0.9072
+v loss: 0.2271, v acc: 0.9623
+model score: 1.4072
+
+epoch: 298
+precision: 0.3276
+AUROC: 0.6623
+t loss: 0.2264, t acc: 0.9070
+v loss: 0.2275, v acc: 0.9615
+model score: 1.3928
+
+epoch: 299
+precision: 0.3276
+AUROC: 0.6622
+t loss: 0.2243, t acc: 0.9103
+v loss: 0.2286, v acc: 0.9615
+model score: 1.3928
+
+epoch: 300
+precision: 0.3304
+AUROC: 0.6621
+t loss: 0.2225, t acc: 0.9108
+v loss: 0.2290, v acc: 0.9617
+model score: 1.3963
+
+epoch: 301
+precision: 0.3333
+AUROC: 0.6624
+t loss: 0.2236, t acc: 0.9085
+v loss: 0.2289, v acc: 0.9619
+model score: 1.4000
+
+epoch: 302
+precision: 0.3276
+AUROC: 0.6627
+t loss: 0.2245, t acc: 0.9102
+v loss: 0.2295, v acc: 0.9615
+model score: 1.3930
+
+epoch: 303
+precision: 0.3393
+AUROC: 0.6631
+t loss: 0.2233, t acc: 0.9096
+v loss: 0.2298, v acc: 0.9623
+model score: 1.4076
+
+epoch: 304
+precision: 0.3393
+AUROC: 0.6634
+t loss: 0.2244, t acc: 0.9089
+v loss: 0.2301, v acc: 0.9623
+model score: 1.4077
+
+epoch: 305
+precision: 0.3423
+AUROC: 0.6635
+t loss: 0.2205, t acc: 0.9098
+v loss: 0.2298, v acc: 0.9625
+model score: 1.4114
+
+epoch: 306
+precision: 0.3423
+AUROC: 0.6638
+t loss: 0.2216, t acc: 0.9113
+v loss: 0.2295, v acc: 0.9625
+model score: 1.4116
+
+epoch: 307
+precision: 0.3333
+AUROC: 0.6641
+t loss: 0.2201, t acc: 0.9123
+v loss: 0.2303, v acc: 0.9619
+model score: 1.4008
+
+epoch: 308
+precision: 0.3304
+AUROC: 0.6642
+t loss: 0.2209, t acc: 0.9101
+v loss: 0.2320, v acc: 0.9617
+model score: 1.3973
+
+epoch: 309
+precision: 0.3304
+AUROC: 0.6645
+t loss: 0.2200, t acc: 0.9109
+v loss: 0.2324, v acc: 0.9617
+model score: 1.3975
+
+epoch: 310
+precision: 0.3248
+AUROC: 0.6648
+t loss: 0.2203, t acc: 0.9116
+v loss: 0.2316, v acc: 0.9613
+model score: 1.3905
+
+epoch: 311
+precision: 0.3248
+AUROC: 0.6648
+t loss: 0.2211, t acc: 0.9103
+v loss: 0.2319, v acc: 0.9613
+model score: 1.3905
+
+epoch: 312
+precision: 0.3333
+AUROC: 0.6647
+t loss: 0.2193, t acc: 0.9114
+v loss: 0.2311, v acc: 0.9619
+model score: 1.4012
+
+epoch: 313
+precision: 0.3363
+AUROC: 0.6648
+t loss: 0.2202, t acc: 0.9105
+v loss: 0.2318, v acc: 0.9621
+model score: 1.4048
+
+epoch: 314
+precision: 0.3423
+AUROC: 0.6647
+t loss: 0.2211, t acc: 0.9105
+v loss: 0.2326, v acc: 0.9625
+model score: 1.4120
+
+epoch: 315
+precision: 0.3451
+AUROC: 0.6649
+t loss: 0.2208, t acc: 0.9101
+v loss: 0.2330, v acc: 0.9625
+model score: 1.4153
+
+epoch: 316
+precision: 0.3451
+AUROC: 0.6651
+t loss: 0.2221, t acc: 0.9081
+v loss: 0.2323, v acc: 0.9625
+model score: 1.4154
+
+epoch: 317
+precision: 0.3393
+AUROC: 0.6654
+t loss: 0.2228, t acc: 0.9107
+v loss: 0.2312, v acc: 0.9623
+model score: 1.4087
+
+epoch: 318
+precision: 0.3248
+AUROC: 0.6654
+t loss: 0.2231, t acc: 0.9087
+v loss: 0.2312, v acc: 0.9613
+model score: 1.3908
+
+epoch: 319
+precision: 0.3248
+AUROC: 0.6654
+t loss: 0.2196, t acc: 0.9091
+v loss: 0.2314, v acc: 0.9613
+model score: 1.3908
+
+epoch: 320
+precision: 0.3248
+AUROC: 0.6653
+t loss: 0.2209, t acc: 0.9101
+v loss: 0.2318, v acc: 0.9613
+model score: 1.3908
+
+epoch: 321
+precision: 0.3276
+AUROC: 0.6653
+t loss: 0.2184, t acc: 0.9099
+v loss: 0.2323, v acc: 0.9615
+model score: 1.3943
+
+epoch: 322
+precision: 0.3362
+AUROC: 0.6652
+t loss: 0.2198, t acc: 0.9108
+v loss: 0.2324, v acc: 0.9619
+model score: 1.4048
+
+epoch: 323
+precision: 0.3362
+AUROC: 0.6655
+t loss: 0.2197, t acc: 0.9115
+v loss: 0.2326, v acc: 0.9619
+model score: 1.4049
+
+epoch: 324
+precision: 0.3514
+AUROC: 0.6657
+t loss: 0.2197, t acc: 0.9114
+v loss: 0.2327, v acc: 0.9630
+model score: 1.4229
+
+epoch: 325
+precision: 0.3578
+AUROC: 0.6660
+t loss: 0.2178, t acc: 0.9123
+v loss: 0.2319, v acc: 0.9634
+model score: 1.4303
+
+epoch: 326
+precision: 0.3551
+AUROC: 0.6663
+t loss: 0.2202, t acc: 0.9108
+v loss: 0.2318, v acc: 0.9634
+model score: 1.4276
+
+epoch: 327
+precision: 0.3585
+AUROC: 0.6663
+t loss: 0.2191, t acc: 0.9107
+v loss: 0.2323, v acc: 0.9636
+model score: 1.4314
+
+epoch: 328
+precision: 0.3519
+AUROC: 0.6663
+t loss: 0.2205, t acc: 0.9097
+v loss: 0.2324, v acc: 0.9632
+model score: 1.4239
+
+epoch: 329
+precision: 0.3426
+AUROC: 0.6661
+t loss: 0.2196, t acc: 0.9109
+v loss: 0.2328, v acc: 0.9627
+model score: 1.4132
+
+epoch: 330
+precision: 0.3364
+AUROC: 0.6661
+t loss: 0.2169, t acc: 0.9131
+v loss: 0.2329, v acc: 0.9623
+model score: 1.4057
+
+epoch: 331
+precision: 0.3333
+AUROC: 0.6660
+t loss: 0.2228, t acc: 0.9090
+v loss: 0.2333, v acc: 0.9621
+model score: 1.4019
+
+epoch: 332
+precision: 0.3364
+AUROC: 0.6661
+t loss: 0.2214, t acc: 0.9095
+v loss: 0.2334, v acc: 0.9623
+model score: 1.4057
+
+epoch: 333
+precision: 0.3364
+AUROC: 0.6660
+t loss: 0.2203, t acc: 0.9093
+v loss: 0.2338, v acc: 0.9623
+model score: 1.4057
+
+epoch: 334
+precision: 0.3423
+AUROC: 0.6661
+t loss: 0.2202, t acc: 0.9110
+v loss: 0.2342, v acc: 0.9625
+model score: 1.4127
+
+epoch: 335
+precision: 0.3423
+AUROC: 0.6662
+t loss: 0.2172, t acc: 0.9120
+v loss: 0.2338, v acc: 0.9625
+model score: 1.4128
+
+epoch: 336
+precision: 0.3426
+AUROC: 0.6663
+t loss: 0.2193, t acc: 0.9112
+v loss: 0.2334, v acc: 0.9627
+model score: 1.4133
+
+epoch: 337
+precision: 0.3394
+AUROC: 0.6665
+t loss: 0.2166, t acc: 0.9116
+v loss: 0.2333, v acc: 0.9625
+model score: 1.4096
+
+epoch: 338
+precision: 0.3426
+AUROC: 0.6666
+t loss: 0.2150, t acc: 0.9114
+v loss: 0.2325, v acc: 0.9627
+model score: 1.4134
+
+epoch: 339
+precision: 0.3394
+AUROC: 0.6666
+t loss: 0.2177, t acc: 0.9122
+v loss: 0.2325, v acc: 0.9625
+model score: 1.4097
+
+epoch: 340
+precision: 0.3455
+AUROC: 0.6667
+t loss: 0.2185, t acc: 0.9110
+v loss: 0.2328, v acc: 0.9627
+model score: 1.4167
+
+epoch: 341
+precision: 0.3394
+AUROC: 0.6668
+t loss: 0.2186, t acc: 0.9117
+v loss: 0.2330, v acc: 0.9625
+model score: 1.4098
+
+epoch: 342
+precision: 0.3394
+AUROC: 0.6669
+t loss: 0.2193, t acc: 0.9130
+v loss: 0.2342, v acc: 0.9625
+model score: 1.4098
+
+epoch: 343
+precision: 0.3364
+AUROC: 0.6671
+t loss: 0.2192, t acc: 0.9103
+v loss: 0.2343, v acc: 0.9623
+model score: 1.4062
+
+epoch: 344
+precision: 0.3364
+AUROC: 0.6673
+t loss: 0.2149, t acc: 0.9124
+v loss: 0.2338, v acc: 0.9623
+model score: 1.4063
+
+epoch: 345
+precision: 0.3304
+AUROC: 0.6674
+t loss: 0.2200, t acc: 0.9112
+v loss: 0.2335, v acc: 0.9619
+model score: 1.3990
+
+epoch: 346
+precision: 0.3304
+AUROC: 0.6676
+t loss: 0.2182, t acc: 0.9116
+v loss: 0.2329, v acc: 0.9619
+model score: 1.3990
+
+epoch: 347
+precision: 0.3333
+AUROC: 0.6676
+t loss: 0.2168, t acc: 0.9126
+v loss: 0.2331, v acc: 0.9621
+model score: 1.4028
+
+epoch: 348
+precision: 0.3274
+AUROC: 0.6677
+t loss: 0.2159, t acc: 0.9119
+v loss: 0.2331, v acc: 0.9617
+model score: 1.3954
+
+epoch: 349
+precision: 0.3217
+AUROC: 0.6677
+t loss: 0.2160, t acc: 0.9138
+v loss: 0.2336, v acc: 0.9613
+model score: 1.3881
+
+epoch: 350
+precision: 0.3136
+AUROC: 0.6678
+t loss: 0.2148, t acc: 0.9130
+v loss: 0.2339, v acc: 0.9606
+model score: 1.3774
+
+epoch: 351
+precision: 0.3109
+AUROC: 0.6678
+t loss: 0.2151, t acc: 0.9132
+v loss: 0.2339, v acc: 0.9604
+model score: 1.3738
+
+epoch: 352
+precision: 0.3136
+AUROC: 0.6678
+t loss: 0.2166, t acc: 0.9134
+v loss: 0.2339, v acc: 0.9606
+model score: 1.3774
+
+epoch: 353
+precision: 0.3162
+AUROC: 0.6677
+t loss: 0.2170, t acc: 0.9117
+v loss: 0.2335, v acc: 0.9608
+model score: 1.3809
+
+epoch: 354
+precision: 0.3162
+AUROC: 0.6675
+t loss: 0.2165, t acc: 0.9121
+v loss: 0.2330, v acc: 0.9608
+model score: 1.3809
+
+epoch: 355
+precision: 0.3246
+AUROC: 0.6676
+t loss: 0.2183, t acc: 0.9118
+v loss: 0.2329, v acc: 0.9615
+model score: 1.3917
+
+epoch: 356
+precision: 0.3274
+AUROC: 0.6675
+t loss: 0.2163, t acc: 0.9126
+v loss: 0.2336, v acc: 0.9617
+model score: 1.3953
+
+epoch: 357
+precision: 0.3274
+AUROC: 0.6674
+t loss: 0.2153, t acc: 0.9127
+v loss: 0.2343, v acc: 0.9617
+model score: 1.3953
+
+epoch: 358
+precision: 0.3274
+AUROC: 0.6673
+t loss: 0.2199, t acc: 0.9133
+v loss: 0.2348, v acc: 0.9617
+model score: 1.3952
+
+epoch: 359
+precision: 0.3394
+AUROC: 0.6673
+t loss: 0.2175, t acc: 0.9113
+v loss: 0.2349, v acc: 0.9625
+model score: 1.4100
+
+epoch: 360
+precision: 0.3364
+AUROC: 0.6673
+t loss: 0.2152, t acc: 0.9125
+v loss: 0.2346, v acc: 0.9623
+model score: 1.4063
+
+epoch: 361
+precision: 0.3364
+AUROC: 0.6674
+t loss: 0.2157, t acc: 0.9134
+v loss: 0.2343, v acc: 0.9623
+model score: 1.4063
+
+epoch: 362
+precision: 0.3364
+AUROC: 0.6675
+t loss: 0.2136, t acc: 0.9133
+v loss: 0.2340, v acc: 0.9623
+model score: 1.4064
+
+epoch: 363
+precision: 0.3393
+AUROC: 0.6678
+t loss: 0.2168, t acc: 0.9124
+v loss: 0.2337, v acc: 0.9623
+model score: 1.4099
+
+epoch: 364
+precision: 0.3393
+AUROC: 0.6680
+t loss: 0.2145, t acc: 0.9151
+v loss: 0.2336, v acc: 0.9623
+model score: 1.4100
+
+epoch: 365
+precision: 0.3363
+AUROC: 0.6681
+t loss: 0.2152, t acc: 0.9129
+v loss: 0.2340, v acc: 0.9621
+model score: 1.4065
+
+epoch: 366
+precision: 0.3421
+AUROC: 0.6682
+t loss: 0.2166, t acc: 0.9118
+v loss: 0.2341, v acc: 0.9623
+model score: 1.4134
+
+epoch: 367
+precision: 0.3421
+AUROC: 0.6682
+t loss: 0.2175, t acc: 0.9131
+v loss: 0.2341, v acc: 0.9623
+model score: 1.4134
+
+epoch: 368
+precision: 0.3421
+AUROC: 0.6683
+t loss: 0.2160, t acc: 0.9126
+v loss: 0.2338, v acc: 0.9623
+model score: 1.4134
+
+epoch: 369
+precision: 0.3421
+AUROC: 0.6682
+t loss: 0.2133, t acc: 0.9137
+v loss: 0.2335, v acc: 0.9623
+model score: 1.4133
+
+epoch: 370
+precision: 0.3482
+AUROC: 0.6681
+t loss: 0.2140, t acc: 0.9147
+v loss: 0.2329, v acc: 0.9627
+model score: 1.4205
+
+epoch: 371
+precision: 0.3514
+AUROC: 0.6679
+t loss: 0.2137, t acc: 0.9130
+v loss: 0.2328, v acc: 0.9630
+model score: 1.4240
+
+epoch: 372
+precision: 0.3545
+AUROC: 0.6676
+t loss: 0.2155, t acc: 0.9144
+v loss: 0.2329, v acc: 0.9632
+model score: 1.4275
+
+epoch: 373
+precision: 0.3611
+AUROC: 0.6673
+t loss: 0.2126, t acc: 0.9127
+v loss: 0.2334, v acc: 0.9636
+model score: 1.4346
+
+epoch: 374
+precision: 0.3611
+AUROC: 0.6669
+t loss: 0.2158, t acc: 0.9109
+v loss: 0.2344, v acc: 0.9636
+model score: 1.4344
+
+epoch: 375
+precision: 0.3545
+AUROC: 0.6666
+t loss: 0.2165, t acc: 0.9122
+v loss: 0.2353, v acc: 0.9632
+model score: 1.4270
+
+epoch: 376
+precision: 0.3514
+AUROC: 0.6662
+t loss: 0.2143, t acc: 0.9121
+v loss: 0.2363, v acc: 0.9630
+model score: 1.4231
+
+epoch: 377
+precision: 0.3514
+AUROC: 0.6661
+t loss: 0.2145, t acc: 0.9106
+v loss: 0.2367, v acc: 0.9630
+model score: 1.4231
+
+epoch: 378
+precision: 0.3545
+AUROC: 0.6662
+t loss: 0.2181, t acc: 0.9104
+v loss: 0.2369, v acc: 0.9632
+model score: 1.4267
+
+epoch: 379
+precision: 0.3545
+AUROC: 0.6664
+t loss: 0.2136, t acc: 0.9130
+v loss: 0.2365, v acc: 0.9632
+model score: 1.4268
+
+epoch: 380
+precision: 0.3514
+AUROC: 0.6666
+t loss: 0.2130, t acc: 0.9151
+v loss: 0.2357, v acc: 0.9630
+model score: 1.4233
+
+epoch: 381
+precision: 0.3545
+AUROC: 0.6670
+t loss: 0.2110, t acc: 0.9150
+v loss: 0.2349, v acc: 0.9632
+model score: 1.4271
+
+epoch: 382
+precision: 0.3545
+AUROC: 0.6672
+t loss: 0.2131, t acc: 0.9133
+v loss: 0.2342, v acc: 0.9632
+model score: 1.4273
+
+epoch: 383
+precision: 0.3514
+AUROC: 0.6673
+t loss: 0.2138, t acc: 0.9123
+v loss: 0.2341, v acc: 0.9630
+model score: 1.4237
+
+epoch: 384
+precision: 0.3482
+AUROC: 0.6674
+t loss: 0.2123, t acc: 0.9130
+v loss: 0.2342, v acc: 0.9627
+model score: 1.4201
+
+epoch: 385
+precision: 0.3391
+AUROC: 0.6673
+t loss: 0.2150, t acc: 0.9125
+v loss: 0.2347, v acc: 0.9621
+model score: 1.4094
+
+epoch: 386
+precision: 0.3421
+AUROC: 0.6673
+t loss: 0.2157, t acc: 0.9141
+v loss: 0.2357, v acc: 0.9623
+model score: 1.4129
+
+epoch: 387
+precision: 0.3451
+AUROC: 0.6672
+t loss: 0.2136, t acc: 0.9135
+v loss: 0.2367, v acc: 0.9625
+model score: 1.4164
+
+epoch: 388
+precision: 0.3421
+AUROC: 0.6670
+t loss: 0.2132, t acc: 0.9143
+v loss: 0.2375, v acc: 0.9623
+model score: 1.4128
+
+epoch: 389
+precision: 0.3421
+AUROC: 0.6668
+t loss: 0.2136, t acc: 0.9139
+v loss: 0.2378, v acc: 0.9623
+model score: 1.4126
+
+epoch: 390
+precision: 0.3451
+AUROC: 0.6667
+t loss: 0.2151, t acc: 0.9141
+v loss: 0.2378, v acc: 0.9625
+model score: 1.4162
+
+epoch: 391
+precision: 0.3482
+AUROC: 0.6664
+t loss: 0.2144, t acc: 0.9132
+v loss: 0.2378, v acc: 0.9627
+model score: 1.4196
+
+epoch: 392
+precision: 0.3482
+AUROC: 0.6663
+t loss: 0.2123, t acc: 0.9144
+v loss: 0.2377, v acc: 0.9627
+model score: 1.4196
+
+epoch: 393
+precision: 0.3482
+AUROC: 0.6663
+t loss: 0.2148, t acc: 0.9131
+v loss: 0.2376, v acc: 0.9627
+model score: 1.4196
+
+epoch: 394
+precision: 0.3482
+AUROC: 0.6663
+t loss: 0.2123, t acc: 0.9125
+v loss: 0.2375, v acc: 0.9627
+model score: 1.4195
+
+epoch: 395
+precision: 0.3482
+AUROC: 0.6662
+t loss: 0.2141, t acc: 0.9138
+v loss: 0.2376, v acc: 0.9627
+model score: 1.4195
+
+epoch: 396
+precision: 0.3451
+AUROC: 0.6662
+t loss: 0.2161, t acc: 0.9105
+v loss: 0.2377, v acc: 0.9625
+model score: 1.4159
+
+epoch: 397
+precision: 0.3451
+AUROC: 0.6663
+t loss: 0.2141, t acc: 0.9119
+v loss: 0.2378, v acc: 0.9625
+model score: 1.4160
+
+epoch: 398
+precision: 0.3421
+AUROC: 0.6665
+t loss: 0.2141, t acc: 0.9127
+v loss: 0.2378, v acc: 0.9623
+model score: 1.4125
+
+epoch: 399
+precision: 0.3421
+AUROC: 0.6666
+t loss: 0.2154, t acc: 0.9105
+v loss: 0.2378, v acc: 0.9623
+model score: 1.4125
+
+epoch: 400
+precision: 0.3478
+AUROC: 0.6667
+t loss: 0.2136, t acc: 0.9122
+v loss: 0.2377, v acc: 0.9625
+model score: 1.4192
+
+epoch: 401
+precision: 0.3478
+AUROC: 0.6668
+t loss: 0.2133, t acc: 0.9133
+v loss: 0.2374, v acc: 0.9625
+model score: 1.4192
+
+epoch: 402
+precision: 0.3478
+AUROC: 0.6669
+t loss: 0.2126, t acc: 0.9145
+v loss: 0.2370, v acc: 0.9625
+model score: 1.4193
+
+epoch: 403
+precision: 0.3421
+AUROC: 0.6669
+t loss: 0.2084, t acc: 0.9141
+v loss: 0.2367, v acc: 0.9623
+model score: 1.4127
+
+epoch: 404
+precision: 0.3421
+AUROC: 0.6669
+t loss: 0.2113, t acc: 0.9144
+v loss: 0.2368, v acc: 0.9623
+model score: 1.4127
+
+epoch: 405
+precision: 0.3478
+AUROC: 0.6668
+t loss: 0.2107, t acc: 0.9141
+v loss: 0.2370, v acc: 0.9625
+model score: 1.4192
+
+epoch: 406
+precision: 0.3478
+AUROC: 0.6667
+t loss: 0.2129, t acc: 0.9150
+v loss: 0.2372, v acc: 0.9625
+model score: 1.4192
+
+epoch: 407
+precision: 0.3478
+AUROC: 0.6667
+t loss: 0.2134, t acc: 0.9133
+v loss: 0.2377, v acc: 0.9625
+model score: 1.4192
+
+epoch: 408
+precision: 0.3509
+AUROC: 0.6667
+t loss: 0.2131, t acc: 0.9137
+v loss: 0.2381, v acc: 0.9627
+model score: 1.4227
+
+epoch: 409
+precision: 0.3540
+AUROC: 0.6667
+t loss: 0.2101, t acc: 0.9147
+v loss: 0.2384, v acc: 0.9630
+model score: 1.4262
+
+epoch: 410
+precision: 0.3509
+AUROC: 0.6667
+t loss: 0.2131, t acc: 0.9138
+v loss: 0.2386, v acc: 0.9627
+model score: 1.4227
+
+epoch: 411
+precision: 0.3509
+AUROC: 0.6668
+t loss: 0.2108, t acc: 0.9131
+v loss: 0.2387, v acc: 0.9627
+model score: 1.4228
+
+epoch: 412
+precision: 0.3540
+AUROC: 0.6670
+t loss: 0.2133, t acc: 0.9134
+v loss: 0.2386, v acc: 0.9630
+model score: 1.4264
+
+epoch: 413
+precision: 0.3540
+AUROC: 0.6671
+t loss: 0.2102, t acc: 0.9149
+v loss: 0.2384, v acc: 0.9630
+model score: 1.4264
+
+epoch: 414
+precision: 0.3540
+AUROC: 0.6671
+t loss: 0.2129, t acc: 0.9131
+v loss: 0.2383, v acc: 0.9630
+model score: 1.4265
+
+epoch: 415
+precision: 0.3540
+AUROC: 0.6672
+t loss: 0.2098, t acc: 0.9146
+v loss: 0.2381, v acc: 0.9630
+model score: 1.4265
+
+epoch: 416
+precision: 0.3571
+AUROC: 0.6674
+t loss: 0.2159, t acc: 0.9132
+v loss: 0.2379, v acc: 0.9632
+model score: 1.4301
+
+epoch: 417
+precision: 0.3540
+AUROC: 0.6675
+t loss: 0.2122, t acc: 0.9151
+v loss: 0.2378, v acc: 0.9630
+model score: 1.4266
+
+epoch: 418
+precision: 0.3540
+AUROC: 0.6676
+t loss: 0.2121, t acc: 0.9155
+v loss: 0.2379, v acc: 0.9630
+model score: 1.4267
+
+epoch: 419
+precision: 0.3478
+AUROC: 0.6676
+t loss: 0.2116, t acc: 0.9134
+v loss: 0.2379, v acc: 0.9625
+model score: 1.4196
+
+epoch: 420
+precision: 0.3419
+AUROC: 0.6677
+t loss: 0.2107, t acc: 0.9145
+v loss: 0.2381, v acc: 0.9621
+model score: 1.4127
+
+epoch: 421
+precision: 0.3419
+AUROC: 0.6678
+t loss: 0.2132, t acc: 0.9125
+v loss: 0.2380, v acc: 0.9621
+model score: 1.4128
+
+epoch: 422
+precision: 0.3419
+AUROC: 0.6680
+t loss: 0.2102, t acc: 0.9166
+v loss: 0.2380, v acc: 0.9621
+model score: 1.4128
+
+epoch: 423
+precision: 0.3419
+AUROC: 0.6681
+t loss: 0.2099, t acc: 0.9137
+v loss: 0.2381, v acc: 0.9621
+model score: 1.4129
+
+epoch: 424
+precision: 0.3419
+AUROC: 0.6681
+t loss: 0.2133, t acc: 0.9119
+v loss: 0.2383, v acc: 0.9621
+model score: 1.4129
+
+epoch: 425
+precision: 0.3419
+AUROC: 0.6682
+t loss: 0.2120, t acc: 0.9126
+v loss: 0.2384, v acc: 0.9621
+model score: 1.4130
+
+epoch: 426
+precision: 0.3419
+AUROC: 0.6684
+t loss: 0.2100, t acc: 0.9140
+v loss: 0.2384, v acc: 0.9621
+model score: 1.4130
+
+epoch: 427
+precision: 0.3419
+AUROC: 0.6684
+t loss: 0.2091, t acc: 0.9135
+v loss: 0.2383, v acc: 0.9621
+model score: 1.4131
+
+epoch: 428
+precision: 0.3419
+AUROC: 0.6684
+t loss: 0.2108, t acc: 0.9166
+v loss: 0.2385, v acc: 0.9621
+model score: 1.4131
+
+epoch: 429
+precision: 0.3390
+AUROC: 0.6685
+t loss: 0.2126, t acc: 0.9138
+v loss: 0.2387, v acc: 0.9619
+model score: 1.4096
+
+epoch: 430
+precision: 0.3390
+AUROC: 0.6685
+t loss: 0.2123, t acc: 0.9150
+v loss: 0.2387, v acc: 0.9619
+model score: 1.4096
+
+epoch: 431
+precision: 0.3419
+AUROC: 0.6686
+t loss: 0.2117, t acc: 0.9135
+v loss: 0.2386, v acc: 0.9621
+model score: 1.4131
+
+epoch: 432
+precision: 0.3419
+AUROC: 0.6687
+t loss: 0.2119, t acc: 0.9150
+v loss: 0.2385, v acc: 0.9621
+model score: 1.4132
+
+epoch: 433
+precision: 0.3419
+AUROC: 0.6687
+t loss: 0.2143, t acc: 0.9116
+v loss: 0.2386, v acc: 0.9621
+model score: 1.4132
+
+epoch: 434
+precision: 0.3390
+AUROC: 0.6687
+t loss: 0.2124, t acc: 0.9144
+v loss: 0.2386, v acc: 0.9619
+model score: 1.4097
+
+epoch: 435
+precision: 0.3361
+AUROC: 0.6687
+t loss: 0.2097, t acc: 0.9144
+v loss: 0.2387, v acc: 0.9617
+model score: 1.4063
+
+epoch: 436
+precision: 0.3306
+AUROC: 0.6687
+t loss: 0.2106, t acc: 0.9140
+v loss: 0.2387, v acc: 0.9613
+model score: 1.3994
+
+epoch: 437
+precision: 0.3279
+AUROC: 0.6686
+t loss: 0.2085, t acc: 0.9160
+v loss: 0.2388, v acc: 0.9610
+model score: 1.3959
+
+epoch: 438
+precision: 0.3279
+AUROC: 0.6685
+t loss: 0.2103, t acc: 0.9163
+v loss: 0.2389, v acc: 0.9610
+model score: 1.3959
+
+epoch: 439
+precision: 0.3306
+AUROC: 0.6684
+t loss: 0.2109, t acc: 0.9152
+v loss: 0.2392, v acc: 0.9613
+model score: 1.3993
+
+epoch: 440
+precision: 0.3306
+AUROC: 0.6683
+t loss: 0.2104, t acc: 0.9126
+v loss: 0.2395, v acc: 0.9613
+model score: 1.3992
+
+epoch: 441
+precision: 0.3361
+AUROC: 0.6683
+t loss: 0.2119, t acc: 0.9123
+v loss: 0.2396, v acc: 0.9617
+model score: 1.4061
+
+epoch: 442
+precision: 0.3361
+AUROC: 0.6682
+t loss: 0.2105, t acc: 0.9150
+v loss: 0.2397, v acc: 0.9617
+model score: 1.4060
+
+epoch: 443
+precision: 0.3390
+AUROC: 0.6681
+t loss: 0.2112, t acc: 0.9144
+v loss: 0.2399, v acc: 0.9619
+model score: 1.4094
+
+epoch: 444
+precision: 0.3390
+AUROC: 0.6681
+t loss: 0.2065, t acc: 0.9161
+v loss: 0.2398, v acc: 0.9619
+model score: 1.4094
+
+epoch: 445
+precision: 0.3390
+AUROC: 0.6681
+t loss: 0.2100, t acc: 0.9143
+v loss: 0.2397, v acc: 0.9619
+model score: 1.4094
+
+epoch: 446
+precision: 0.3390
+AUROC: 0.6681
+t loss: 0.2081, t acc: 0.9145
+v loss: 0.2396, v acc: 0.9619
+model score: 1.4094
+
+epoch: 447
+precision: 0.3419
+AUROC: 0.6681
+t loss: 0.2104, t acc: 0.9140
+v loss: 0.2396, v acc: 0.9621
+model score: 1.4129
+
+epoch: 448
+precision: 0.3419
+AUROC: 0.6681
+t loss: 0.2085, t acc: 0.9153
+v loss: 0.2395, v acc: 0.9621
+model score: 1.4129
+
+epoch: 449
+precision: 0.3390
+AUROC: 0.6681
+t loss: 0.2096, t acc: 0.9139
+v loss: 0.2396, v acc: 0.9619
+model score: 1.4094
+
+epoch: 450
+precision: 0.3390
+AUROC: 0.6680
+t loss: 0.2089, t acc: 0.9136
+v loss: 0.2396, v acc: 0.9619
+model score: 1.4094
+
+epoch: 451
+precision: 0.3390
+AUROC: 0.6680
+t loss: 0.2097, t acc: 0.9155
+v loss: 0.2396, v acc: 0.9619
+model score: 1.4094
+
+epoch: 452
+precision: 0.3390
+AUROC: 0.6679
+t loss: 0.2078, t acc: 0.9143
+v loss: 0.2397, v acc: 0.9619
+model score: 1.4093
+
+epoch: 453
+precision: 0.3361
+AUROC: 0.6679
+t loss: 0.2096, t acc: 0.9158
+v loss: 0.2396, v acc: 0.9617
+model score: 1.4059
+
+epoch: 454
+precision: 0.3361
+AUROC: 0.6679
+t loss: 0.2117, t acc: 0.9134
+v loss: 0.2396, v acc: 0.9617
+model score: 1.4059
+
+epoch: 455
+precision: 0.3361
+AUROC: 0.6680
+t loss: 0.2121, t acc: 0.9157
+v loss: 0.2397, v acc: 0.9617
+model score: 1.4059
+
+epoch: 456
+precision: 0.3361
+AUROC: 0.6679
+t loss: 0.2084, t acc: 0.9163
+v loss: 0.2399, v acc: 0.9617
+model score: 1.4059
+
+epoch: 457
+precision: 0.3361
+AUROC: 0.6678
+t loss: 0.2118, t acc: 0.9153
+v loss: 0.2400, v acc: 0.9617
+model score: 1.4058
+
+epoch: 458
+precision: 0.3361
+AUROC: 0.6678
+t loss: 0.2111, t acc: 0.9155
+v loss: 0.2402, v acc: 0.9617
+model score: 1.4058
+
+epoch: 459
+precision: 0.3333
+AUROC: 0.6679
+t loss: 0.2102, t acc: 0.9147
+v loss: 0.2404, v acc: 0.9615
+model score: 1.4024
+
+epoch: 460
+precision: 0.3306
+AUROC: 0.6679
+t loss: 0.2065, t acc: 0.9163
+v loss: 0.2403, v acc: 0.9613
+model score: 1.3990
+
+epoch: 461
+precision: 0.3306
+AUROC: 0.6680
+t loss: 0.2111, t acc: 0.9153
+v loss: 0.2402, v acc: 0.9613
+model score: 1.3990
+
+epoch: 462
+precision: 0.3306
+AUROC: 0.6680
+t loss: 0.2099, t acc: 0.9140
+v loss: 0.2401, v acc: 0.9613
+model score: 1.3990
+
+epoch: 463
+precision: 0.3279
+AUROC: 0.6680
+t loss: 0.2079, t acc: 0.9150
+v loss: 0.2401, v acc: 0.9610
+model score: 1.3957
+
+epoch: 464
+precision: 0.3306
+AUROC: 0.6681
+t loss: 0.2100, t acc: 0.9142
+v loss: 0.2401, v acc: 0.9613
+model score: 1.3991
+
+epoch: 465
+precision: 0.3306
+AUROC: 0.6681
+t loss: 0.2082, t acc: 0.9160
+v loss: 0.2400, v acc: 0.9613
+model score: 1.3991
+
+epoch: 466
+precision: 0.3306
+AUROC: 0.6681
+t loss: 0.2106, t acc: 0.9152
+v loss: 0.2399, v acc: 0.9613
+model score: 1.3991
+
+epoch: 467
+precision: 0.3306
+AUROC: 0.6682
+t loss: 0.2085, t acc: 0.9143
+v loss: 0.2398, v acc: 0.9613
+model score: 1.3991
+
+epoch: 468
+precision: 0.3306
+AUROC: 0.6682
+t loss: 0.2075, t acc: 0.9153
+v loss: 0.2397, v acc: 0.9613
+model score: 1.3992
+
+epoch: 469
+precision: 0.3333
+AUROC: 0.6684
+t loss: 0.2112, t acc: 0.9137
+v loss: 0.2396, v acc: 0.9615
+model score: 1.4027
+
+epoch: 470
+precision: 0.3361
+AUROC: 0.6684
+t loss: 0.2088, t acc: 0.9138
+v loss: 0.2395, v acc: 0.9617
+model score: 1.4061
+
+epoch: 471
+precision: 0.3361
+AUROC: 0.6685
+t loss: 0.2064, t acc: 0.9147
+v loss: 0.2395, v acc: 0.9617
+model score: 1.4061
+
+epoch: 472
+precision: 0.3361
+AUROC: 0.6684
+t loss: 0.2080, t acc: 0.9168
+v loss: 0.2396, v acc: 0.9617
+model score: 1.4061
+
+epoch: 473
+precision: 0.3361
+AUROC: 0.6685
+t loss: 0.2116, t acc: 0.9153
+v loss: 0.2398, v acc: 0.9617
+model score: 1.4061
+
+epoch: 474
+precision: 0.3361
+AUROC: 0.6685
+t loss: 0.2093, t acc: 0.9135
+v loss: 0.2399, v acc: 0.9617
+model score: 1.4062
+
+epoch: 475
+precision: 0.3361
+AUROC: 0.6686
+t loss: 0.2113, t acc: 0.9144
+v loss: 0.2400, v acc: 0.9617
+model score: 1.4062
+
+epoch: 476
+precision: 0.3361
+AUROC: 0.6686
+t loss: 0.2114, t acc: 0.9138
+v loss: 0.2402, v acc: 0.9617
+model score: 1.4062
+
+epoch: 477
+precision: 0.3361
+AUROC: 0.6686
+t loss: 0.2085, t acc: 0.9155
+v loss: 0.2404, v acc: 0.9617
+model score: 1.4062
+
+epoch: 478
+precision: 0.3333
+AUROC: 0.6686
+t loss: 0.2076, t acc: 0.9155
+v loss: 0.2405, v acc: 0.9615
+model score: 1.4028
+
+epoch: 479
+precision: 0.3333
+AUROC: 0.6687
+t loss: 0.2105, t acc: 0.9143
+v loss: 0.2405, v acc: 0.9615
+model score: 1.4028
+
+epoch: 480
+precision: 0.3333
+AUROC: 0.6687
+t loss: 0.2083, t acc: 0.9141
+v loss: 0.2405, v acc: 0.9615
+model score: 1.4028
+
+epoch: 481
+precision: 0.3333
+AUROC: 0.6688
+t loss: 0.2061, t acc: 0.9173
+v loss: 0.2405, v acc: 0.9615
+model score: 1.4029
+
+epoch: 482
+precision: 0.3333
+AUROC: 0.6688
+t loss: 0.2070, t acc: 0.9153
+v loss: 0.2404, v acc: 0.9615
+model score: 1.4029
+
+epoch: 483
+precision: 0.3333
+AUROC: 0.6689
+t loss: 0.2111, t acc: 0.9149
+v loss: 0.2403, v acc: 0.9615
+model score: 1.4029
+
+epoch: 484
+precision: 0.3306
+AUROC: 0.6689
+t loss: 0.2087, t acc: 0.9147
+v loss: 0.2401, v acc: 0.9613
+model score: 1.3995
+
+epoch: 485
+precision: 0.3306
+AUROC: 0.6690
+t loss: 0.2094, t acc: 0.9153
+v loss: 0.2399, v acc: 0.9613
+model score: 1.3995
+
+epoch: 486
+precision: 0.3333
+AUROC: 0.6690
+t loss: 0.2078, t acc: 0.9152
+v loss: 0.2397, v acc: 0.9615
+model score: 1.4030
+
+epoch: 487
+precision: 0.3333
+AUROC: 0.6691
+t loss: 0.2055, t acc: 0.9149
+v loss: 0.2395, v acc: 0.9615
+model score: 1.4030
+
+epoch: 488
+precision: 0.3333
+AUROC: 0.6692
+t loss: 0.2089, t acc: 0.9157
+v loss: 0.2393, v acc: 0.9615
+model score: 1.4030
+
+epoch: 489
+precision: 0.3333
+AUROC: 0.6692
+t loss: 0.2113, t acc: 0.9138
+v loss: 0.2392, v acc: 0.9615
+model score: 1.4031
+
+epoch: 490
+precision: 0.3333
+AUROC: 0.6692
+t loss: 0.2080, t acc: 0.9160
+v loss: 0.2391, v acc: 0.9615
+model score: 1.4031
+
+epoch: 491
+precision: 0.3361
+AUROC: 0.6693
+t loss: 0.2051, t acc: 0.9178
+v loss: 0.2390, v acc: 0.9617
+model score: 1.4065
+
+epoch: 492
+precision: 0.3361
+AUROC: 0.6692
+t loss: 0.2072, t acc: 0.9149
+v loss: 0.2391, v acc: 0.9617
+model score: 1.4065
+
+epoch: 493
+precision: 0.3361
+AUROC: 0.6692
+t loss: 0.2073, t acc: 0.9144
+v loss: 0.2392, v acc: 0.9617
+model score: 1.4065
+
+epoch: 494
+precision: 0.3390
+AUROC: 0.6692
+t loss: 0.2072, t acc: 0.9162
+v loss: 0.2392, v acc: 0.9619
+model score: 1.4100
+
+epoch: 495
+precision: 0.3390
+AUROC: 0.6692
+t loss: 0.2092, t acc: 0.9142
+v loss: 0.2394, v acc: 0.9619
+model score: 1.4099
+
+epoch: 496
+precision: 0.3419
+AUROC: 0.6691
+t loss: 0.2073, t acc: 0.9153
+v loss: 0.2395, v acc: 0.9621
+model score: 1.4134
+
+epoch: 497
+precision: 0.3419
+AUROC: 0.6691
+t loss: 0.2056, t acc: 0.9158
+v loss: 0.2397, v acc: 0.9621
+model score: 1.4134
+
+epoch: 498
+precision: 0.3478
+AUROC: 0.6691
+t loss: 0.2077, t acc: 0.9152
+v loss: 0.2400, v acc: 0.9625
+model score: 1.4204
+
+epoch: 499
+precision: 0.3478
+AUROC: 0.6690
+t loss: 0.2117, t acc: 0.9148
+v loss: 0.2402, v acc: 0.9625
+model score: 1.4204
+
