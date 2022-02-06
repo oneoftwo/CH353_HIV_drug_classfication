@@ -1,5 +1,9 @@
 # job related files
 LJW*
 
+__pycache__
+
+!exp_result/model/
+exp_result/model/*
 !exp_result/model/model_200.pkl
-exp_result/model/
+
