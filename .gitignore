@@ -1,13 +1,5 @@
 # job related files
 LJW*
-# *.x
 
-
-# data
-# positive_provided.txt
-# negative_provided.txt
-
-
-# experiment results
-/exp_result/
-!/exp_result/model/model_200.pkl
+exp_result/
+!exp_result/model/model_200.pkl
