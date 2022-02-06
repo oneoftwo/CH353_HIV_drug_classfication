@@ -1,4 +1,4 @@
-# HIV
+# HIV drug calssification
 predicting HIV drug cappability (CH353 final project)
 
 ## To train the model
