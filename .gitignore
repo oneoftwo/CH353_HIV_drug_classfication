@@ -9,6 +9,5 @@ LJW*
 
 
 # experiment results
-/exp_*/
-exp_final*/
-!final_models/
+/exp_result/
+!/exp_result/model/model_200.pkl

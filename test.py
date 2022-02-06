@@ -1,40 +1,37 @@
 import sys
 import pickle
-
-import model as MODEL
-import train as TRAIN
-import parse as PARSE
-import config as CONFIG
-
 from torch.utils.data import DataLoader
+import _model as MODEL
+import _train as TRAIN
+import _parse as PARSE
+import config as CONFIG
 
 
 ###############################################################################
 # config ######################################################################
 
 # pos and neg txt file to test
-positive_dir = './positive_provided.txt'
-negative_dir = './negative_provided.txt'
+positive_dir = './data/positive_provided.txt'
+negative_dir = './data/negative_provided.txt'
 
 # model pkl file
 # oversampling 1 (no oversampling)
 # model_dir = './final_models/model_best_os1.pkl'
 # oversampling 5
-model_dir = './final_models/model_best_os5.pkl'
+model_dir = './exp_result/model/model_200.pkl'
 # oversampling 20
 # model_dir = './final_models/model_best_os20.pkl'
 
 ###############################################################################
 
-
 model = pickle.load(open(model_dir, 'rb'))
 print(model)
+
 minor_smiles = PARSE.get_smiles_list(positive_dir)
 major_smiles = PARSE.get_smiles_list(negative_dir)
 
 total_smiles = major_smiles + minor_smiles
 total_label = [0 for _ in major_smiles] + [1 for _ in minor_smiles]
-
 
 max_atom = CONFIG.max_atom
 props = CONFIG.additional_properties
